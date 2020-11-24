@@ -1,0 +1,689 @@
+* {
+    box-sizing: border-box;
+    font-family: Oswald;
+    color: white;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(Images/body.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    background-color: #6FC6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 50px;
+}
+
+.logo img {
+    width: 100px;
+    animation: anim1 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes anim1 {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(30deg)
+    }
+}
+
+.call {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+}
+
+.footer {
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+}
+
+.call .ex {
+    text-align: center;
+    margin-left: 16px;
+    width: 100px;
+}
+
+.ex a {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 35px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+    background: #ff77aa;
+    box-shadow: 0 5px 0 #ff5577;
+    transition: .3s linear;
+}
+
+.ex a:hover {
+    background: #ff99cc;
+}
+
+.ex a:active {
+    box-shadow: none;
+    background: #ff5577;
+}
+
+/*-----------Слоган и кнопка-------------*/
+.add {
+    width: 100%;
+    height: 700px;
+    background-image: url(Images/gorjashhie-tury.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.add p {
+    color: #ff77aa;
+    position: relative;
+    font-size: 128px;
+    text-align: left;
+    margin: 0 auto;
+    animation: anim2 1.5s infinite ease-in-out alternate
+}
+
+@keyframes anim2 {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.15)
+    }
+}
+
+/*-----------Особенности горящих путевок-------------*/
+.features {
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    width: 100%;
+}
+
+.features:hover div p {
+    display: flex;
+    flex-direction: column;
+}
+
+.features:hover div h1 {
+    width: 90%;
+}
+
+.features div {
+    transition: .2s linear;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+p:nth-of-type(even) {
+    animation: anim3 1.5s infinite ease-in-out alternate
+}
+
+@keyframes anim3 {
+    0% {
+        transform: scale(1);
+        color: white;
+    }
+
+    100% {
+        transform: scale(1.1);
+        color: #ff77aa;
+    }
+}
+
+.features div p {
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    display: none;
+    margin: 0 auto;
+}
+
+.features h1 {
+    transition: .2s linear;
+    margin: 0 auto;
+    padding: 0px 30px;
+    text-align: center;
+    border-radius: 50px;
+    width: 70%;
+    background-color: #ff77aa;
+}
+
+/*-----------Список туров-------------*/
+.tours {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s linear;
+}
+
+.tours #zag1 {
+    margin: 0 auto;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tours h1 {
+    margin: 0 auto;
+    padding: 0px 30px;
+    text-align: center;
+    border-radius: 50px;
+    width: 90%;
+    background-color: #ff77aa;
+}
+
+.tours .tours-container {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: .2s linear;
+}
+
+.tours .photo {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 10px auto;
+
+}
+
+.tours .info-container {
+    margin-bottom: 16px;
+    background-image: linear-gradient(to bottom, rgba(225, 225, 225, 0) 30%, #ff77aa);
+    border-radius: 40px;
+}
+
+.tours p {
+    text-align: center;
+    font-size: 32px;
+    transition: .2s linear;
+}
+
+.tours .photo img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    transition: .2s linear;
+}
+
+.country {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
+    padding-top: 70px;
+    margin-left: 130px;
+    opacity: 0;
+}
+
+#mask {
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 2;
+    width: 400px;
+    height: 400px;
+}
+
+.tours .photo:hover img {
+    opacity: .0;
+    transform: scale(1.1);
+}
+
+.tours .photo:hover .country {
+    color: white;
+    opacity: 1;
+}
+
+/*-----------Консультанты-------------*/
+.consultants {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s linear;
+    background-color: #ff77aa;
+    border-radius: 32px;
+    box-shadow: 0px 0px 12px 0px white;
+}
+
+.wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: .2s linear;
+}
+
+.cons {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.photo {
+    transition: .2s linear;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.photo p {
+    transition: .2s linear;
+    color: white;
+    opacity: 0;
+    margin-top: 100px;
+}
+
+.photo:hover {
+    box-shadow: inset 0px 0px 32px 4px #ff77aa;
+    background-size: 110%;
+}
+
+.photo:hover p {
+    opacity: 1
+}
+
+.p4:hover {
+    background-size: 112%;
+}
+
+.p6:hover {
+    background-size: 160%;
+}
+
+.p1 {
+    background-image: url(Content/Cons/Galina%20Petrova.jpg);
+}
+
+.p2 {
+    background-position: top;
+    background-image: url(Content/Cons/Ivan%20Alekseev.jpg);
+}
+
+.p3 {
+    background-image: url(Content/Cons/Sveta%20Astakhova.jpg);
+    background-position: center;
+}
+
+.p4 {
+    background-image: url(Content/Cons/Screenshot_1.png);
+    background-position: center;
+    background-size: 102%;
+}
+
+.p5 {
+    background-image: url(Content/Cons/nancy.jpg);
+    background-position: top;
+}
+
+.p6 {
+    background-image: url(Content/Cons/conan.jpg);
+    background-position: top;
+    background-size: 150%;
+}
+
+/*-----------Преимущества-------------*/
+.wow {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px auto;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.wow div {
+    transition: .2s linear;
+    width: 200px;
+    height: 200px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 26px;
+}
+
+.wow div img {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+.w1 {
+    background-color: #ff4343;
+}
+
+.w2 {
+    background-color: orange;
+}
+
+.w3 {
+    background-color: #ffff46;
+}
+
+.w4 {
+    background-color: #00CC66;
+}
+
+.w5 {
+    background-color: #43f;
+}
+
+.w6 {
+    background-color: #c4c;
+}
+
+.wow div:hover {
+    box-shadow: 0px 0px 16px 4px #ff77aa;
+    transform: scale(1.05);
+}
+
+/*-----------Карта-------------*/
+iframe {
+    margin: 0 auto;
+}
+
+/*-----------Отзывы-------------*/
+.comments {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main-com {
+    border-radius: 32px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    background: orange;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    box-shadow: 0px 0px 8px 1px white;
+    background-color: #ff77aa;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 50%;
+    margin-left: 16px;
+}
+
+.icon div {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.icon p {
+    padding-top: 8px;
+}
+
+.icon div img {
+    width: 70px;
+    height: 70px;
+}
+
+.date {
+    padding-top: 8px;
+    text-align: right;
+    width: 30%;
+    margin-right: 32px;
+}
+
+.comm-info {
+    width: 100%;
+    margin-left: 16px;
+    text-indent: 24px;
+
+}
+
+/*-----------Форма-------------*/
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 32px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 1px white;
+    background-color: #ff77aa;
+}
+
+form hr {
+    width: 100%;
+}
+
+form p {
+    margin: 8px auto;
+    font-size: 20px;
+}
+
+input {
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+textarea {
+    font-size: 20px;
+    width: 100%;
+}
+
+form button {
+    margin-top: 20px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    background-color: #6FC6FF;
+    /*background: linear-gradient(to right, #6FC6FF 0%, #ff77aa 51%,#6FC6FF 100%);
+    background-size: 200% auto;*/
+    width: 50%;
+    height: 40px;
+    transition: .3s;
+}
+
+form button:hover {
+    width: 80%;
+    background-position: right center;
+}
+
+/*-----------Кнопка наверх-------------*/
+.upper {
+    line-height: normal;
+    max-width: none;
+    z-index: 2;
+    position: fixed;
+    bottom: -50px;
+    right: -50px;
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    background-color: #ff77aa;
+    transition: .2s linear;
+}
+
+.upper:hover {
+    bottom: -25px;
+    right: -25px;
+}
+
+/*-----------media---------------------*/
+.menu{
+    max-width:1000px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ff77aa;
+    transition: .2s linear;
+}
+.menu-button{
+    display: none;
+    font-size: 48px;
+    width: 100%;
+    padding-left:64px;
+}
+nav{    
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 12px 0;
+}
+nav a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width:800px) {
+    .add p {
+        font-size: 90px;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        margin: 16px;
+    }
+
+    .call {
+        width: 50%;
+    }
+
+    form {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .add p {
+        animation: none;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100%;
+        margin: 16px;
+    }
+
+    .call {
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    p:nth-of-type(even) {
+        animation: none;
+    }
+    nav{
+        display: none;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-left:48px;
+        flex-direction: column;
+        margin:0 auto;
+}
+    nav a{
+        padding: 16px;
+}
+    .menu-button{
+        display: flex;
+}
+    .menu:hover nav{
+        display: flex;
+    }
+}

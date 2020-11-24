@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Overwatch</title>
+    <link rel="icon" type="image/x-icon" href="https://static.playoverwatch.com/img/favicon-696bc07714.ico">
+    <link rel="stylesheet" type="text/css" href="overwatch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="heroChanges.js"></script>
+
+    <script>
+        
+    </script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="header" id="menu">
+        <div class="header-logo">
+            <button onclick="MenuClick()" class="over-btn">
+                <img src="images/menu-btn.png">
+            </button>
+            <a href="index.html" class="main-button">
+                <img src="images/logo_white.png">
+                <svg class="HeaderSection-logo" viewBox="0 27 64 9.4">
+                    <g>
+                        <polygon fill="rgb(255,156,0)" points="10.71 27.11 12.11 29.09 9.32 29.09 10.71 27.11"></polygon>
+                        <polygon points="34.85 29.15 33.74 31.79 33.74 31.79 32.59 29.15 31.38 29.15 30.23 31.75 29.14 29.15 27.3 29.15 29.58 34.33 30.73 34.33 31.9 31.72 33.05 34.33 34.29 34.33 36.55 29.15 34.85 29.15"></polygon>
+                        <polygon points="60.55 29.15 60.55 30.97 57.38 30.97 57.38 29.15 55.6 29.15 55.6 34.33 57.38 34.33 57.38 32.33 60.55 32.33 60.55 34.33 62.31 34.33 62.31 29.15 60.55 29.15"></polygon>
+                        <polygon points="38.65 29.15 35.18 34.33 37.1 34.33 39.26 31 41.39 34.33 43.38 34.33 39.99 29.15 38.65 29.15"></polygon>
+                        <polygon points="14.56 29.15 12.61 29.15 10.64 32.3 8.7 29.15 6.7 29.15 9.96 34.33 11.17 34.33 14.56 29.15"></polygon>
+                        <polygon points="42.01 29.15 42.01 30.51 44.26 30.51 44.26 34.33 46.03 34.33 46.03 30.51 47.81 30.51 48.71 29.15 42.01 29.15"></polygon>
+                        <path d="M6,29.53a2.1,2.1,0,0,0-.61-.08H1.45c-.9,0-1.45.45-1.45,1.17v2.83a1.07,1.07,0,0,0,.61,1l.07,0,1.08-1.09V30.8h3.3v2.46H2.64L1.27,34.62h4.1c.86,0,1.46-.48,1.46-1.17V30.76L6,29.54Z" transform="translate(0 -0.29)"></path>
+                        <path d="M53.41,29.44H49.87l-.28,0h-.05l-.15.24h0l-1,1.47v2.27c0,.69.6,1.17,1.45,1.17h3.53a1.31,1.31,0,0,0,1.46-1.17v-.89H53.1v.7H50.18V30.8H53.1v.6h1.77v-.78C54.87,29.91,54.29,29.44,53.41,29.44Z" transform="translate(0 -0.29)"></path>
+                        <polygon points="14.47 30.45 14.47 34.33 19.95 34.33 19.95 32.97 16.24 32.97 16.24 32.31 18.74 32.31 18.74 31.13 16.24 31.13 16.24 30.51 19.95 30.51 19.95 29.15 15.37 29.15 14.47 30.45"></polygon>
+                        <path d="M25.66,32.68c.63,0,1.31-.33,1.31-.94V30.5c0-.65-.51-1.06-1.33-1.06H20.73v5.18H22.5V30.77h2.77s0,0,0,.05v.78h0a.19.19,0,0,1-.1,0H23.3v1l2.17,1.95h2.42l-2.23-1.94Z" transform="translate(0 -0.29)"></path>
+                        <polygon fill="rgb(255,156,0)" points="39.28 36.31 37.88 34.33 40.67 34.33 39.28 36.31"></polygon>
+                        <path d="M63.32,29.59h.26l.07,0a.16.16,0,0,1,.05.13.15.15,0,0,1-.13.17l.18.24h-.16l-.15-.22v.22h-.13Zm.13.1v.15h.09a.07.07,0,0,0,0-.06.07.07,0,0,0,0-.06l-.08,0Z" transform="translate(0 -0.29)"></path>
+                        <path d="M63.5,30.37a.5.5,0,1,1,.5-.5A.5.5,0,0,1,63.5,30.37Zm.41-.5a.41.41,0,1,0-.41.41A.41.41,0,0,0,63.91,29.87Z" transform="translate(0 -0.29)"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav id="menu1">
+            <ul>
+                <li><a href="">Игра
+                        <img class="not-active" src="images/expand_arrow.png">
+                        <img class="active" src="images/expand_arrow_active.png">
+                    </a>
+                    <ul>
+                        <li><a href="pages/game.html">Об игре</a></li>
+                        <li><a href="pages/maps.html">Поля боя</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/heroes.html">Герои</a></li>
+                <li><a href="pages/materials/materials.html">Материалы</a></li>
+                <li><a href="https://overwatch2.playoverwatch.com/ru-ru/trailer">Overwatch 2</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+            <div class="video" id="video">
+                <img src="images/overwatch-tittle.png">
+                <div class="platform-icons">
+                    <img id="pc" src="images/pc-icon.png">
+                    <img id="ps4" src="images/ps4-icon.png">
+                    <img id="xbox" src="images/xbox-icon.png">
+                    <img id="nintendo" src="images/switch-icon.png">
+                </div>
+                <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" poster="images/poster.jpg" data-js="header-video">
+                    <source src="main-video.mp4" type="video/mp4" </video>
+            </div>
+            
+        <div class="main-container" id="main-block">
+            <div class="echo">
+                <div class="paralax">
+                    <img class='first' src="images/echo.png">
+                </div>
+                <div class="echo-info">
+                    <h1 class="trans">НОВЫЙ ГЕРОЙ: ЭХО</h1>
+                    <h2 class="trans">уже в игре</h2>
+                    <p class="trans">32-й герой Overwatch — последнее слово техники, многоцелевой адаптирующийся робот, созданный доктором Миной Ляо для выполнения самых разных задач — и на поле боя, и в мирное время.</p>
+                    <a href="#"><button class="trans">ПОДРОБНЕЕ О ГЕРОЕ</button></a>
+                </div>
+            </div>
+
+            <div class="news">
+                <div class="news-info">
+                    <a href="https://playoverwatch.com/news/23391369/tematicheskie-nagrady-v-chest-eho-novogo-geroya-overwatch">
+                        <div class="news-block new_1">
+                            <div>
+                                <p>Новый 32-ой герой.<br>Встречайте Эхо!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://playoverwatch.com/news/23388102/izmeneniya-rotacii-geroev-i-polej-boya">
+                        <div class="news-block new_2">
+                            <div>
+                                <p>Изменения ротации героев и полей боя</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://vk.com/ovleague">
+                        <div class="news-block new_3">
+                            <div>
+                                <p>Встречайте! Овощная лига Overwatch!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://playoverwatch.com/news/23369557/vozvrashayas-v-proshloe-obzor-istorii-arhivov">
+                        <div class="news-block new_4">
+                            <div>
+                                <p>Сквозь время: обзор истории "Архивов"</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="ow2">
+                    <p>В разработке</p>
+                    <img src="images/Overwatch_2_logo.png">
+                    <a href="https://overwatch2.playoverwatch.com/ru-ru/trailer" class="ow2_button"><button>ПОДРОБНЕЕ</button></a>
+                </div>
+            </div>
+
+            <div class="heroes">
+                <div class="heroes-tittle">
+                    <h1>ГЕРОИ - ВСЕМ И КАЖДОМУ</h1>
+                    <p>Замедляйте ход времени, взмывайте ввысь в реактивном костюме и обрушивайте на противника шквал огня или возьмите на себя роль разумного хомяка внутри бронированной мехи: у каждого героя Overwatch есть уникальные разрушительные способности.</p>
+                </div>
+                <div class="heroes-main">
+                    <div class="heroes-info">
+                        <div id="block" class="heroes-img"></div>
+                        <div class="character">
+                            <h2 id="h2_tittle">D.VA</h2>
+                            <p id="p_tittle">Бывшая киберспортсменка, ныне — знаменитый пилот новейшей боевой мехи на страже родины.</p>
+                        </div>
+                    </div>
+                    <div class="heroes-icon">
+                <a onmouseover="change1()" href="pages/d.va/d.va.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/d.va.png">
+                        </div>
+                        <p>D.VA</p>
+                    </div>
+                </a>
+
+                <a onmouseover="change2()" href="pages/ana/ana.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/ana.png">
+                        </div>
+                        <p>Ана</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change3()" href="pages/mercy/mercy.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/mercy.png">
+                        </div>
+                        <p>Ангел</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change4()" href="pages/bastion/bastion.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/bastion.png">
+                        </div>
+                        <p>Бастион</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change5()" href="pages/baptiste/baptiste.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/baptist.png">
+                        </div>
+                        <p>Батист</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change6()" href="pages/brigitte/brigitte.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/briggita.png">
+                        </div>
+                        <p>Бригитта</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change7()" href="pages/genji/genji.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/genji.png">
+                        </div>
+                        <p>Гендзи</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change8()" href="pages/dzen/dzen.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/dzen.png">
+                        </div>
+                        <p>Дзенъятта</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change9()" href="pages/reaper/reaper.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/reaper.png">
+                        </div>
+                        <p>Жнец</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change10()"href="pages/zarya/zarya.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/zarya.png">
+                        </div>
+                        <p>Заря</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change11()" href="pages/junkrat/junkrat.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/junkrat.png">
+                        </div>
+                        <p>Крысавчик</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change12()" href="pages/doomfist/doomfist.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/doomfist.png">
+                        </div>
+                        <p>Кулак смерти</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change13()" href="pages/lucio/lucio.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/lucio.png">
+                        </div>
+                        <p>Люсио</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change14()" href="pages/mccree/mccree.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/mccree.png">
+                        </div>
+                        <p>Маккри</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change15()" href="pages/moira/moira.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/moira.png">
+                        </div>
+                        <p>Мойра</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change16()" href="pages/mei/mei.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/mei.png">
+                        </div>
+                        <p>Мэй</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change17()" href="pages/orisa/orisa.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/orisa.png">
+                        </div>
+                        <p>Ориса</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change18()" href="pages/reinhardt/reinhardt.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/reinhardt.png">
+                        </div>
+                        <p>Райнхардт</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change19()" href="pages/widowmaker/widowmaker.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/widowmaker.png">
+                        </div>
+                        <p>Роковая вдова</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change20()" href="pages/sigma/sigma.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/sigma.png">
+                        </div>
+                        <p>Сигма</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change21()" href="pages/symmetra/symmetra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/symmetra.png">
+                        </div>
+                        <p>Симметра</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change22()" href="pages/soldier76/soldier76.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/soldier-76.png">
+                        </div>
+                        <p>Солдат-76</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change23()" href="pages/sombra/sombra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/sombra.png">
+                        </div>
+                        <p>Сомбра</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change24()" href="pages/hammond/hammond.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/hammond.png">
+                        </div>
+                        <p>Таран</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change25()" href="pages/torbjorn/torbjorn.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/torbjorn.png">
+                        </div>
+                        <p>Торбьорн</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change26()" href="pages/tracer/tracer.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/tracer.png">
+                        </div>
+                        <p>Трейсер</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change27()" href="pages/roadhog/roadhog.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/roadhog.png">
+                        </div>
+                        <p>Турбосвин</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change28()" href="pages/winston/winston.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/winston.png">
+                        </div>
+                        <p>Уинстон</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change29()" href="pages/pharra/pharra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/pharra.png">
+                        </div>
+                        <p>Фарра</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change30()" href="pages/hanzo/hanzo.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/hanzo.png">
+                        </div>
+                        <p>Хандзо</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change31()" href="pages/echo/echo.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/echo.png">
+                        </div>
+                        <p>Эхо</p>
+                    </div>
+                </a>
+                
+                <a onmouseover="change32()" href="pages/ashe/ashe.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="images/heroes-icon/ashe.png">
+                        </div>
+                        <p>Эш</p>
+                    </div>
+                </a>
+            </div>
+                </div>
+                <hr>
+                <div class="footer">
+                    <div class="buy-banner">
+                        <div>
+                            <img src="images/Buy-Footer-Art.png">
+                        </div>
+                        <div>
+                            <h1>ВСТУПАЙТЕ В БИТВУ ЗА БУДУЩЕЕ</h1>
+                            <p>Сражайтесь за будущее в непревзойденном командном шутере!</p>
+                            <a href="https://eu.shop.battle.net/ru-ru/product/overwatch?blzcmp=ow_buy_bot"><button>ПРИОБРЕСТИ</button></a>
+                        </div>
+                    </div>
+                    <div class="social-banner">
+                        <h2 class="SocialModule-title">БУДЬТЕ НА СВЯЗИ!</h2>
+                        <ul class="social-links">
+                            <li><a href="https://vk.com/overwatchru">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" fill=white viewBox="0 0 192 192">
+                                        <title>VK</title>
+                                        <g>
+                                            <path d="M157.233993,66.1462211 C158.123557,63.1797719 157.233994,61 153.000244,61 L139.000244,61 C135.440505,61 133.799415,62.8830035 132.909356,64.9593945 C132.909356,64.9593945 125.789878,82.3129373 115.704198,93.5851974 C112.441227,96.8481681 110.957879,97.8863636 109.178009,97.8863636 C108.288198,97.8863636 107,96.8481681 107,93.8819658 L107,66.1462211 C107,62.586482 105.96694,61 103.000244,61 L81.0002441,61 C78.7757158,61 77.4378669,62.6521562 77.4378669,64.2179674 C77.4378669,67.5925348 82.4804603,68.3707494 83.0002441,77.8633869 L83.0002441,98.4799003 C83.0002441,103 82.1839388,103.819509 80.4040693,103.819509 C75.6579974,103.819509 64.1131647,86.388441 57.2660122,66.4427426 C55.9241353,62.5659897 54.5782535,61 51.0002441,61 L37.0002441,61 C33.0002441,61 32.2001953,62.8830035 32.2001953,64.9593945 C32.2001953,68.6675178 36.9465141,87.059256 54.2998099,111.383646 C65.8685915,127.995268 82.1682449,137 97.0002441,137 C105.899345,137 107.000244,135 107.000244,131.555007 L107.000244,119 C107.000244,115 107.843292,114.201711 110.661357,114.201711 C112.737749,114.201711 116.297488,115.239906 124.603545,123.249196 C134.095936,132.741586 135.660882,137 141.000244,137 L155.000244,137 C159.000244,137 161.000244,135 159.846475,131.053112 C158.583906,127.119411 154.051802,121.412135 148.038124,114.646617 C144.774906,110.790356 139.88045,106.637574 138.397102,104.560689 C136.320711,101.891255 136.914001,100.704429 138.397102,98.3315162 C138.397102,98.3315162 155.454123,74.3036478 157.233993,66.1462211 Z"></path>
+                                        </g>
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://twitter.com/OverwatchRU">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="social-twitter" viewBox="0 0 64 64" width="100px" fill="white" height="100px">
+                                        <title>Twitter</title>
+                                        <path d="M54,18.9c-1.4,0.7-2.9,1.1-4.5,1.3c3.6-2.4,3.4-4.9,3.4-4.9c-1.7,1-3.5,1.8-5.5,2.2c-3.3-3.5-8.8-3.7-12.3-0.4         c-2.3,2.1-3.2,5.3-2.5,8.3h-0.4c-10.7-0.5-17.4-9-17.4-9c-3.8,7.4,2.3,11.5,2.3,11.5c-1.3,0-2.5-0.3-3.6-1c0.1,7.1,6.8,8.6,6.8,8.6         c-1.2,0.3-2.4,0.4-3.6,0.2c1.2,5.4,7.7,6.1,7.7,6.1C21.2,45.3,12,45.4,12,45.4c11.5,7.3,26.7,3.9,34-7.6c2.5-3.9,3.8-8.5,3.8-13.2         c0-0.3,0-0.5,0-0.8s0-0.3,0-0.4v-0.1C51.6,22.2,53,20.7,54,18.9z"></path>
+                                    </svg>
+                                </a></li>
+
+                            <li><a href="https://www.youtube.com/OverwatchRU">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="social-youtube" fill="white" viewBox="0 0 64 64" width="100px" height="100px">
+                                        <title>Youtube</title>
+                                        <path d="M55.9,32a54.4,54.4,0,0,0-.5-8.3c-.6-4.3-1.9-5.9-2.7-6.8a5.9,5.9,0,0,0-2.9-1.2s-5.5-.4-16-.4H30.1c-10.5,0-16,.4-16,.4a5.9,5.9,0,0,0-2.9,1.2c-.8.9-2.1,2.5-2.7,6.8A54.5,54.5,0,0,0,8.1,32h0a54.5,54.5,0,0,0,.5,8.3c.6,4.3,1.9,5.9,2.7,6.8a5.9,5.9,0,0,0,2.9,1.2s5.5.4,16,.4h3.7c10.5,0,16-.4,16-.4a5.9,5.9,0,0,0,2.9-1.2c.8-.9,2.1-2.5,2.7-6.8a54.4,54.4,0,0,0,.5-8.3ZM27.1,40.9V23.2L40.8,32Z"></path>
+                                    </svg>
+                                </a></li>
+
+                        </ul>
+                    </div>
+                    <div class="blizzard-banner">
+                        <a class="blizzard-link" href="https://www.blizzard.com/" title="Blizzard Home">
+                            <img src="images/blizzard.png">
+                        </a>
+                        <nav class="footer-links">
+                            <a href="https://careers.blizzard.com/ru-ru/">ВАКАНСИИ</a>
+                            <hr>
+                            <a href="https://www.blizzard.com/ru-ru/company/about/">О КОМПАНИИ</a>
+                            <hr>
+                            <a href="https://eu.battle.net/support/ru/">ПОДДЕРЖКА</a>
+                            <hr>
+                            <a href="https://www.blizzard.com/ru-ru/company/about/contact.html">ОТКРЫТЬ ЗАПРОС</a>
+                            <hr>
+                            <a href="https://blizzard.gamespress.com/ru">ПРЕСС-РЕЛИЗЫ</a>
+                            <hr>
+                            <a href="https://develop.battle.net/">API</a>
+                        </nav>
+                        <p>© BLIZZARD ENTERTAINMENT, 2020. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+                        <p>Все упомянутые <a title="Все упомянутые товарные знаки являются собственностью соответствующих владельцев" href="https://www.blizzard.com/ru-ru/legal/b04001c4-dc81-480d-a475-5e276e241e4f/pravovye-ogovorki-v-otnoshenii-tretih-lic">товарные знаки</a> являются собственностью соответствующих владельцев.</p>
+                        <nav class="footer-links">
+                            <a href="https://www.blizzard.com/ru-ru/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/politika-konfidencialnosti-blizzard-entertainment">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                            <hr>
+                            <a href="https://www.blizzard.com/ru-ru/legal/">СОГЛАШЕНИЕ BLIZZARD</a>
+                            <hr>
+                            <a href="https://www.blizzard.com/ru-ru/legal/511dbf9e-2b2d-4047-8243-4c5c65e0ebf1/terms-of-use-for-blizzards-websites">СОГЛАШЕНИЕ САЙТА</a>
+                        </nav>
+                        <a class="link_12" href="https://www.mkrf.ru/" title="Blizzard Home">
+                            <img src="images/12+.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+</body>
+
+</html>

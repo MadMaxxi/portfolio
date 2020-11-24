@@ -1,0 +1,1556 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    z-index: -1;
+    margin: 0 auto;
+    background-image: url(../images/overwatch-body-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+p {
+    font-size: 20px;
+    margin: 8px auto;
+}
+
+a {
+    font-size: 20px;    
+}
+
+h1 {
+    font-style: italic;
+    font-size: 42px;
+    color: #4b535d;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 8px auto;
+}
+
+/*----------------------------Меню-------------------------------*/
+.header {
+    background-color: white;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    background: #0f1923;
+}
+
+.header-logo {
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.header-logo a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.header-logo a img {
+    width: 80px;
+    height: auto;
+}
+
+.header-logo a svg {
+    fill: white;
+    width: 300px;
+}
+
+.header-logo button {
+    width: 80px;
+    height: 80px;
+    margin: auto 0;
+    background: none;
+    border: none;
+    display: none;
+}
+
+.over-btn img {
+    width: 100%;
+}
+
+#menu1 {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    z-index: 10;
+}
+
+#menu1 ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+
+#menu1 ul li {
+    position: relative;
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+#menu1 ul li a {
+    display: block;
+    font-size: 28px;
+    padding: 19px 48px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: .2s linear;
+    text-height: bold;
+}
+
+#menu1 ul li img {
+    position: absolute;
+    top: 26px;
+    width: 24px;
+    margin: auto 8px;
+    transition: .2s linear;
+}
+
+#menu1 ul li .active {
+    opacity: 0;
+}
+
+#menu1 ul li:hover .not-active {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+#menu1 ul li:hover .active {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+#menu1 ul li > a:hover,
+#menu1 ul li:hover > a {
+    border-bottom: 4px solid rgb(255, 156, 0);
+    color: rgb(255, 156, 0);
+}
+
+#menu ul li .a-link {
+    border-bottom: 4px solid rgb(255, 156, 0);
+}
+
+#menu1 ul li ul {
+    position: absolute;
+    top: 78px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: #0f1923;
+}
+
+#menu1 ul li .sec-ul {
+    width: 120%;
+    height: auto;
+    background-color: #0f1923;
+}
+
+#menu1 ul li:hover ul {
+    display: block;
+}
+
+#menu1 ul li ul li {
+    float: none;
+    width: 100%;
+}
+
+#menu1 ul li ul li a {
+    display: block;
+    padding: 8px 0px;
+    text-transform: none;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#menu1 ul li ul li a:hover {
+    color: rgb(255, 156, 0);
+
+}
+
+/*----------------------------Контент-----------------------------*/
+.content {
+    z-index: -1;
+    display: absolute;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.content a, .buy-banner a{
+    text-decoration: none;
+    color: rgb(255, 156, 0);
+    border: 3px solid rgb(255, 156, 0);
+    padding: 10px;
+    font-size: 20px;
+    background: none;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.content a:hover,.buy-banner a:hover{
+    color: white;
+    transform: translate(5px,-5px);
+    background-color: rgb(255, 156, 0);
+    box-shadow: -5px 5px 0px 0px rgb(255, 124, 0), -4px 4px 0px 0px rgb(255, 124, 0), -3px 3px 0px 0px rgb(255, 124, 0), -2px 2px 0px 0px rgb(255, 124, 0), -1px 1px 0px 0px rgb(255, 124, 0);
+}
+.content a:active, .buy-banner a:focus{
+    transform: translate(0px,0px);
+    background-color: rgb(255, 200, 0);
+    border: 3px solid rgb(255, 200, 0);
+    box-shadow: none;
+}
+
+.main-container {
+    opacity: 0;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0f1923;
+    box-shadow: 0px 0px 24px 1px black;
+    border-radius: 10px;
+}
+
+/*----------------------------Заголовок-----------------------------*/
+.about_game {
+    background-image: url(../images/game/game_glow.png);
+    width: 100%;
+    height: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#h1 {
+    font-size: 64px;
+    color: #4b535d;
+}
+
+.gameplay {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 32px;
+}
+
+.gameplay:before {
+    content: '';
+    border-bottom: 30px solid white;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 10%;
+    position: absolute;
+    top: 315px;
+    left: 0px;
+}
+
+.gameplay:after {
+    content: '';
+    border-bottom: 30px solid white;
+    border-left: 30px solid transparent;
+    height: 0;
+    width: 10%;
+    position: absolute;
+    top: 315px;
+    right: 0px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.gameplay div {
+    width: 40%;
+    margin:auto;
+    height: 300px;
+}
+
+/*----------------------------Герои-----------------------------*/
+.about_heroes {
+    width: 100%;
+    background-color: #63a2d5;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 800px;
+}
+
+.about_heroes h1,
+.about_heroes p,
+.about_heroes a {
+    margin: 16px auto;
+    color: white;
+}
+
+.about_heroes p {
+    font-size: 24px;
+}
+
+.about_heroes button {
+    color: white;
+}
+
+.about_heroes .left {
+    width: 50%;
+    background-image: url(../images/game/heroes-keyart-1-left.png);
+    background-size: auto 100%;
+    background-position: left -250px bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.about_heroes .mid {
+    position: absolute;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about_heroes .right {
+    width: 50%;
+    background-image: url(../images/game/heroes-keyart-1-right.png);
+    height: 100%;
+    background-size: auto 100%;
+    background-position: right -250px bottom;
+    background-repeat: no-repeat;
+}
+
+.about_heroes .Svg-icon {
+    width: 32%;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+/*----------------------------Контент-----------------------------*/
+hr {
+    width: 100%;
+    background-color: rgba(64, 82, 117, .5);
+    border: none;
+    height: 1px;
+}
+
+/*----------------------------Преимущества ролей-----------------------*/
+.role_features {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.role_features h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.role_features div {
+    margin: 0 auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.role_features div svg {
+    width: 40%;
+    min-width: 120px;
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+/*----------------------------Режимы игры------------------------------*/
+.modes {
+    background: transparent url(../images/game/game-modes.jpg) no-repeat top/cover;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.game_modes {
+    width: 77.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.game_modes #div {
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+}
+
+.game_modes #div h1,
+.game_modes div div h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#div_p {
+    width: 60%;
+    text-align: center;
+}
+
+.game_modes div {
+    margin: 32px auto;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    transition: .2s linear;
+}
+
+.game_modes div img {
+    width: 360px;
+}
+
+.game_modes div div {
+    margin: 0 auto;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.game_modes div div p {
+    margin: 0 auto;
+}
+
+.game_modes div div svg {
+    margin: 16px auto;
+    width: 50px;
+    height: 50px;
+}
+
+.game_modes div div a {
+    margin: 0 auto;
+}
+
+.game_modes .mode_1:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px red, -5px 5px 0px 0px red, -4px 4px 0px 0px red, -3px 3px 0px 0px red, -2px 2px 0px 0px red, -1px 1px 0px 0px red
+}
+
+.game_modes .mode_2:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px orange, -5px 5px 0px 0px orange, -4px 4px 0px 0px orange, -3px 3px 0px 0px orange, -2px 2px 0px 0px orange, -1px 1px 0px 0px orange
+}
+
+.game_modes .mode_3:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px #fd0, -5px 5px 0px 0px #fd0, -4px 4px 0px 0px #fd0, -3px 3px 0px 0px #fd0, -2px 2px 0px 0px #fd0, -1px 1px 0px 0px #fd0
+}
+
+.game_modes .mode_4:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px green, -5px 5px 0px 0px green, -4px 4px 0px 0px green, -3px 3px 0px 0px green, -2px 2px 0px 0px green, -1px 1px 0px 0px green
+}
+
+.game_modes .mode_5:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px blue, -5px 5px 0px 0px blue, -4px 4px 0px 0px blue, -3px 3px 0px 0px blue, -2px 2px 0px 0px blue, -1px 1px 0px 0px blue
+}
+
+.game_modes .mode_6:hover {
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0px 0px purple, -5px 5px 0px 0px purple, -4px 4px 0px 0px purple, -3px 3px 0px 0px purple, -2px 2px 0px 0px purple, -1px 1px 0px 0px purple
+}
+
+/*---------------------------Мастерская------------------------------*/
+.workshop {
+    background-color: #f2f1ed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.workshop-bg {
+    background: transparent url(../images/game/workshop-bg.jpg) no-repeat top/cover;
+    width: 50%;
+    padding-top: 48px;
+}
+
+.workshop-bg h1,
+.workshop-bg h2,
+.workshop-bg p {
+    color: white;
+    text-align: center;
+}
+
+.AboutWorkshop-cards {
+    width: 50%;
+}
+
+.AboutWorkshop-card {
+    margin: 0 auto;
+    width: 90%;
+    height: 150px;
+}
+
+.AboutWorkshop-card .card-icon {
+    border-radius: 50%;
+    background-color: #4b535d;
+    width: 89px;
+    height: 89px;
+    float: left;
+    margin: 16px 16px;
+}
+
+.AboutWorkshop-card svg {
+    width: 80%;
+    fill: white;
+    margin: 10px 8px;
+}
+
+.AboutWorkshop-card:last-child {
+    height: 60px;
+    text-align: center;
+}
+
+.AboutWorkshop-card:last-child a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 128px;
+    margin-left: 32px;
+    margin: 0 auto;
+}
+
+/*---------------------------Репутация--------------------------------*/
+.endorsements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+.about-endorsements {
+    width: 70%;
+    padding: 80px 64px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.type-of-endorsements {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #f2f1ed;
+    padding: 80px 0px;
+}
+
+.title-endorsements {
+    width: 30%;
+    text-align: center;
+}
+
+.endorsements-icon {
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    padding: 32px 0px;
+    transition: .2s linear;
+    border-radius: 5px;
+}
+
+.endorsements-icon svg {
+    width: 90px;
+    fill: white;
+}
+
+.end-1 {
+    background-color: #f19512;
+}
+
+.end-2 {
+    background-color: #c918f4;
+}
+
+.end-3 {
+    background-color: #3ece44;
+}
+
+.end-1:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0px 0px #d07300, -3px 3px 0px 0px #d07300, -2px 2px 0px 0px #d07300, -1px 1px 0px 0px #d07300
+}
+
+.end-2:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0px 0px #a706d2, -3px 3px 0px 0px #a706d2, -2px 2px 0px 0px #a706d2, -1px 1px 0px 0px #a706d2
+}
+
+.end-3:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0px 0px #1cac22, -3px 3px 0px 0px #1cac22, -2px 2px 0px 0px #1cac22, -1px 1px 0px 0px #1cac22
+}
+
+/*----------------------------Уровни репутации------------------------*/
+.reputation {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    background: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px 60px;
+}
+
+.reputation div {
+    width: 100%;
+}
+
+.reputation video {
+    width: 100%;
+}
+
+.reputation .rep-1 {
+    width: 50%;
+}
+
+.reputation .rep-2 {
+    width: 40%;
+    height: 300px;
+    vertical-align: center;
+}
+
+.reputation .rep-3 {
+    width: 100%;
+}
+
+.reputation .rep-4 {
+    width: 100%;
+}
+
+/*----------------------------Прогресс---------------------------------*/
+.progress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: white;
+}
+
+.prog-banner {
+    width: 100%;
+    height: 480px;
+    background: transparent url(https://static.playoverwatch.com/img/pages/about/progress-banner-9b4f22497f.jpg) no-repeat top/auto 100%;
+}
+
+.prog-title {
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 50%;
+    text-align: center;
+}
+
+.prog-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.prog-info div {
+    width: 60%;
+    margin: auto 0;
+}
+
+.prog-info img {
+    margin: auto 0;
+}
+
+/*----------------------------Поиск группы-----------------------------*/
+.LookingForGroup {
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.LFG-icon {
+    width: 50%;
+    background-color: rgb(255, 156, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LFG-icon svg {
+    fill: white;
+    width: 350px;
+    margin: 0 auto;
+    background-image: radial-gradient(circle at center,#fecd37 0,rgba(247,147,30,0) 70%);
+}
+
+.LFG-title {
+    width: 50%;
+    background-color: #f2f1ed;
+    padding-left: 100px;
+
+}
+
+.LFG-title:before {
+    background-color: #f2f1ed;
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 400px;
+    transform: skewX(-10deg);
+    left: 47%;
+}
+/*---------------------Footer-------------------*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer .buy-banner {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px;
+    background-image: url(../images/social-bg.jpg);
+}
+.footer .social-banner {
+    width: 100%;
+    background-image: url(../images/social-bg.jpg);
+    color: white;
+    text-align: center;
+}
+
+.footer .social-banner {
+    width: 100%;
+}
+
+.footer .social-banner ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.footer .social-banner ul li {
+    display: inline;
+    margin: 0 8px;
+}
+
+.footer .social-banner ul li:hover svg {
+    fill: rgb(255, 156, 0);
+}
+
+.footer .blizzard-banner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.footer .blizzard-banner .blizzard-link {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;    
+}
+
+.footer .blizzard-banner img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer .blizzard-banner .footer-links {
+    margin: 32px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer .blizzard-banner .footer-links a {
+    color: black;
+}
+
+.footer .blizzard-banner .footer-links hr {
+    width: 1px;
+    height: 20px;
+    margiN-top: 0px;
+}
+
+.footer .blizzard-banner .link_12 {
+    margin: 8px auto;
+    width: 70px;
+    height: 70px;
+}
+
+.footer .blizzard-banner .link_12 img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer .blizzard-banner p {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .blizzard-banner a {
+    color: rgb(255, 156, 0);
+}
+
+.footer .blizzard-banner a:hover {
+    color: black;
+}
+
+/*---------------------------Медиа-запросы----------------------------*/
+@media only screen and (max-width:1280px) {
+    .about_heroes .left {
+        height: 50%;
+        background-image: url(../images/game/heroes-keyart-2-left.png);
+        background-position: 0;
+    }
+
+    .about_heroes .right {
+        height: 50%;
+        background-image: url(../images/game/heroes-keyart-2-right.png);
+        background-position: 100% 0;
+    }
+
+    .about_heroes {
+        background: transparent url(../images/game/heroes-bg.jpg) no-repeat top/auto 100%;
+        height: 700px;
+    }
+
+    .about_heroes .mid {
+        width: 80%;
+    }
+
+    .role_features {
+        flex-direction: column;
+    }
+
+    .role_features div {
+        width: 60%;
+        display: block;
+        margin: 16px auto;
+    }
+
+    .role_features div svg {
+        float: left;
+        margin-right: 32px;
+    }
+
+    #div_p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .workshop-bg {
+        width: 40%;
+    }
+
+    .AboutWorkshop-cards {
+        width: 60%;
+    }
+
+    .header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .header-logo {
+        width: 10%;
+    }
+
+    .header-logo svg {
+        display: none;
+    }
+
+    #menu1 {
+        width: 100%;
+    }
+
+    .reputation div {
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .reputation .rep-1 {
+        width: 100%;
+    }
+
+    .reputation .rep-2 {
+        width: 80%;
+        height: 400px;
+    }
+
+    .prog-banner {
+        height: 300px;
+    }
+
+    .prog-title {
+        min-width: 960px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .prog-info {
+        margin: 0 auto;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .pil {
+        flex-direction: row-reverse;
+    }
+
+    .LookingForGroup {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .LFG-icon {
+        width: 100%;
+        background-color: rgb(255, 156, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .LFG-icon svg {
+        width: 250px;        
+    }
+
+    .LFG-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px 50px;
+
+    }
+    .LFG-title h1, .LFG-title p{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .LFG-title:before {
+        content: none;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .about_heroes .left {
+        display: none;
+    }
+
+    .about_heroes .right {
+        display: none;
+    }
+
+    .about_heroes .mid {
+        width: 90%;
+    }
+
+    .about_heroes svg {
+        display: none;
+    }
+
+    .about_heroes {
+        background: transparent url(../images/game/heroes-bg.jpg) no-repeat;
+        background-position: left;
+        background-size: 100% 100%;
+        height: 450px;
+    }
+
+    .role_features div {
+        width: 80%;
+    }
+
+    .game_modes #div {
+        width: 100%;
+        height: auto;
+        max-width: 1920px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .game_modes #div h1,
+    .game_modes div div h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #div_p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .game_modes div img {
+        display: none;
+    }
+
+    .game_modes div {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .game_modes .mode:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    .game_modes div div {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: none;
+    }
+
+    .game_modes div div svg {
+        width: 100px;
+        height: 100px;
+        background: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+    }
+
+    .game_modes div div h2 {
+        width: 50%;
+        margin: auto;
+    }
+
+    .game_modes div div p {
+        width: 100%;
+    }
+
+    .game_modes .mode_1:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px red, -4px 4px 0px 0px red, -3px 3px 0px 0px red, -2px 2px 0px 0px red, -1px 1px 0px 0px red
+    }
+
+    .game_modes .mode_2:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px orange, -4px 4px 0px 0px orange, -3px 3px 0px 0px orange, -2px 2px 0px 0px orange, -1px 1px 0px 0px orange
+    }
+
+    .game_modes .mode_3:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px #fd0, -4px 4px 0px 0px #fd0, -3px 3px 0px 0px #fd0, -2px 2px 0px 0px #fd0, -1px 1px 0px 0px #fd0
+    }
+
+    .game_modes .mode_4:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px green, -4px 4px 0px 0px green, -3px 3px 0px 0px green, -2px 2px 0px 0px green, -1px 1px 0px 0px green
+    }
+
+    .game_modes .mode_5:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px blue, -4px 4px 0px 0px blue, -3px 3px 0px 0px blue, -2px 2px 0px 0px blue, -1px 1px 0px 0px blue
+    }
+
+    .game_modes .mode_6:hover svg {
+        transition: .2s linear;
+        transform: translate(5px, -5px);
+        box-shadow: -5px 5px 0px 0px purple, -4px 4px 0px 0px purple, -3px 3px 0px 0px purple, -2px 2px 0px 0px purple, -1px 1px 0px 0px purple
+    }
+
+    .game_modes div div a {
+        margin: 0;
+    }
+
+    .workshop {
+        flex-direction: column;
+    }
+
+    .workshop-bg {
+        width: 100%;
+    }
+
+    .AboutWorkshop-cards {
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 136px;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .header-logo svg {
+        display: block;
+    }
+
+    #menu1 {
+        width: 100%;
+    }
+
+    #menu1 ul li a {
+        padding: 8px 32px;
+
+    }
+
+    #menu1 ul li img {
+        top: 16px;
+        width: 24px;
+        margin: auto 8px;
+    }
+
+    #menu1 ul li ul {
+        top: 60px;
+        left: 0px;
+    }
+
+    .gameplay div {
+        width: 100%;
+        margin: auto auto;
+    }
+
+    .gameplay div:nth-child(2) {
+        margin-left: 16px;
+    }
+
+    .type-of-endorsements {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-endorsements {
+        width: 90%;
+    }
+
+    .title-endorsements {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 16px;
+    }
+
+    .endorsements-icon {
+        width: 40%;
+        display: block;
+        background: none;
+        color: black;
+        text-align: left;
+
+    }
+
+    .title-endorsements p {
+        width: 60%;
+        margin: auto;
+    }
+
+    .endorsements-icon svg {
+        width: 90px;
+        height: 90px;
+        fill: white;
+        padding: 8px;
+        border-radius: 8px;
+        float: left;
+        margin-right: 16px;
+        transition: .2s linear;
+    }
+
+    .endorsements-icon h2 {
+        font-size: 24px;
+    }
+
+    .endorsements-icon h3 {
+        font-size: 16px;
+    }
+
+    .end-1 svg {
+        background-color: #f19512;
+    }
+
+    .end-2 svg {
+        background-color: #c918f4;
+    }
+
+    .end-3 svg {
+        background-color: #3ece44;
+    }
+
+    .endorsements-icon:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .end-1:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #d07300, -3px 3px 0px 0px #d07300, -2px 2px 0px 0px #d07300, -1px 1px 0px 0px #d07300
+    }
+
+    .end-2:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #a706d2, -3px 3px 0px 0px #a706d2, -2px 2px 0px 0px #a706d2, -1px 1px 0px 0px #a706d2
+    }
+
+    .end-3:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #1cac22, -3px 3px 0px 0px #1cac22, -2px 2px 0px 0px #1cac22, -1px 1px 0px 0px #1cac22
+    }
+
+    .reputation div {
+        max-width: 640px;
+    }
+
+    .reputation {
+        padding: 30px;
+    }
+
+    .prog-title {
+        min-width: 640px;
+        text-align: center;
+    }
+
+    .prog-title p {
+        font-size: 20px;
+    }
+
+    .prog-info {
+        margin: 0 auto;
+        min-width: 640px;
+        width: 100%;
+    }
+
+    .pil {
+        flex-direction: row-reverse;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    .LFG-icon svg {
+        width: 150px;        
+    }
+
+    .LFG-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px 50px;
+
+    }
+    .LFG-title h1, .LFG-title p{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100px;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .header-logo button {
+        display: block;
+        transition: .2s linear;
+    }
+
+    .header-logo svg {
+        display: block;
+    }
+
+    #menu1 {
+        display: none;
+        width: 100%;
+        height: 0px;
+    }
+
+    #menu1 ul {
+        height: auto;
+        margin: 0;
+        flex-direction: column;
+        position: absolute;
+        justify-content: flex-start;
+        background-color: #0f1923;
+    }
+
+    #menu1 ul li {
+        text-align: left;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #menu1 ul li ul {
+        display: none;
+        top: 0;
+        position: relative;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        background-color: #0f1923;
+    }
+
+    #menu1 ul li .sec-ul {
+        width: 50%;
+    }
+
+    .header-logo a img {
+        height: 80px;
+        margin: auto 0;
+    }
+
+    .about_heroes {
+        height: 400px;
+    }
+
+    .about_heroes .mid {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .about_heroes h1 {
+        font-size: 30px;
+        margin: 16px 0;
+        text-align: left;
+    }
+
+    .about_heroes p {
+        font-size: 18px;
+        margin: 16px 0;
+        text-align: left;
+    }
+
+    .role_features {
+        padding-left: 8px;
+    }
+
+    .role_features h1 {
+        text-align: left;
+    }
+
+    .role_features div {
+        width: 100%;
+    }
+
+    .game_modes {
+        width: 100%;
+    }
+
+    .game_modes div {
+        margin: 0 auto;
+    }
+
+    #div_p {
+        text-align: left;
+        padding: 16px;
+    }
+
+    .workshop-bg {
+        padding-top: 0px;
+    }
+
+    .workshop-bg h1,
+    .workshop-bg h2,
+    .workshop-bg p {
+        text-align: left;
+        margin-left: 16px;
+    }
+
+    .type-of-endorsements {
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .about-endorsements {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .title-endorsements {
+        text-align: left;
+    }
+
+    .endorsements-icon {
+        width: 100%;
+        display: block;
+        background: none;
+        color: black;
+        text-align: left;
+
+    }
+
+    .title-endorsements p {
+        width: 100%;
+        margin: auto;
+    }
+
+    .endorsements-icon svg {
+        width: 90px;
+        height: 90px;
+        fill: white;
+        padding: 8px;
+        border-radius: 8px;
+        float: left;
+        margin-right: 16px;
+        transition: .2s linear;
+    }
+
+    .endorsements-icon h2 {
+        font-size: 24px;
+    }
+
+    .endorsements-icon h3 {
+        font-size: 16px;
+    }
+
+    .end-1 svg {
+        background-color: #f19512;
+    }
+
+    .end-2 svg {
+        background-color: #c918f4;
+    }
+
+    .end-3 svg {
+        background-color: #3ece44;
+    }
+
+    .endorsements-icon:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .end-1:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #d07300, -3px 3px 0px 0px #d07300, -2px 2px 0px 0px #d07300, -1px 1px 0px 0px #d07300
+    }
+
+    .end-2:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #a706d2, -3px 3px 0px 0px #a706d2, -2px 2px 0px 0px #a706d2, -1px 1px 0px 0px #a706d2
+    }
+
+    .end-3:hover svg {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px 0px 0px #1cac22, -3px 3px 0px 0px #1cac22, -2px 2px 0px 0px #1cac22, -1px 1px 0px 0px #1cac22
+    }
+
+    .reputation {
+        padding: 30px 10px;
+    }
+
+    .prog-title {
+        width: 100%;
+        min-width: 0;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .prog-info {
+        margin: 0 auto;
+        min-width: 640px;
+        width: 100%;
+    }
+
+    .prog-info img {
+        max-width: 200px;
+    }
+
+    .prog-title p {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .LFG-title {
+        width: 100%;
+        text-align: left;
+        padding: 20px 10px;
+
+    }
+    .LFG-title h1, .LFG-title p{
+        width: 100%;
+    }
+}

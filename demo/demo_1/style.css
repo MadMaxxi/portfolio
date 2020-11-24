@@ -1,0 +1,394 @@
+    p{
+        margin-bottom: 0px;
+        font-weight: normal;
+}
+    a{
+        text-decoration: none;
+        color: white;
+        transition: .3s linear;
+}
+    a:hover{
+        box-shadow: -3px 3px 6px 2px black;
+}
+    body{
+        background-color: #222;
+        font-family: 'Oswald', sans-serif;
+        max-width: 960px;
+        margin:0 auto;
+}
+.upper{
+    line-height: normal;
+    max-width: none;
+    z-index: 2;
+    position: fixed;
+    bottom:-50px;
+    right:-50px;
+    width:100px;
+    border-radius: 50%;
+    height:100px;
+    background-color: #ee0045;
+    transition:.2s linear;
+}
+.upper:hover{
+    bottom:-25px;
+    right:-25px;
+}
+    .container{
+        width: 960px;
+        color: white;
+        display: grid;
+        justify-content: start;
+        grid-template-columns:25% 1fr;
+        grid-gap: 5px;
+        max-width: 960px;
+        margin:0 auto;
+        grid-template-areas: 'header header'
+        'main main'
+        'footer footer'
+    }
+    .container div{
+        max-width: 960px;
+        min-width: 40vh;
+        font-size: 20px;
+        text-align: center;
+    }
+    .call{
+        width: 60%;
+        margin: 12px;
+        display: flex;
+        justify-content: center;
+}
+    .call img{
+        width: 70px;
+        height: 70px;
+        margin: 0px 24px 0px 24px;
+        transition: .2s linear;
+        transform: rotate(25deg);
+}
+    .call p{
+        transition: .2s linear;
+        opacity: 0;
+        margin:10px -40px;
+}
+    .call:hover p{
+        opacity: 1;
+        margin:10px 40px;
+}
+    .call img:hover{
+        transform: rotate(-25deg);
+}
+    .logo text{
+        font-family: 'Sriracha', cursive;
+        transition: .2s linear;
+        font-size:40px;
+        font-style: italic;
+        font-weight: bold;
+}
+    .update{
+        opacity: 0;
+}
+    .logo{
+        margin: 12px;
+        width: 20%;
+}
+    svg:hover .update{
+        opacity: 1;
+}
+    svg:hover .num{
+        opacity: 0;
+}
+    .header{ 
+        display: flex;
+        box-shadow: 0 0 20px 4px #ee0045;
+        max-width: 960px;
+        width: 100%;
+        grid-area: header;
+        background-color:#ee0045;
+}
+    .nav{grid-area: nav}
+    .main{
+        width: 100%;
+        max-width: 960px;
+        box-shadow: 0 0 20px 4px #ee0045;
+        grid-area: main;
+        background-color:#200772; 
+}
+    .footer{
+        width: 100%;
+        max-width: 960px;
+        box-shadow: 0 0 20px 4px #ee0045;
+        background-color:#200772;
+        grid-area: footer;
+        margin:20px 0;
+}
+    .feature{
+        width: 100%;
+        max-width: 960px;
+}
+    .feature-items{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+}
+    .feature-items div{
+        margin: 0 auto;
+}
+/*--------------слайдер---------------*/
+        .carousel{
+            background-color:#ee0045;
+            max-width: 960px;
+            margin:30px auto;
+            width: 90%;
+        }
+        .carousel-wrapper{
+            margin:10px 30px;
+            overflow:hidden;
+            position: relative;
+        }
+        .carousel-items{
+            width: 10000px;
+            height: 360px;
+            overflow:hidden;
+            position: relative;
+        }
+        .carousel-block{
+            float:left;
+            width:800px;
+            height: 300px;
+            padding:20px 0px;
+            margin: 0 auto;
+            margin-top:18px; 
+        }
+        .carousel-block img{
+            margin: 0 auto;
+            width: 180px;
+            height: 180px;
+        }
+        .carousel-block p{
+            font-weight: bold;
+            font-size: 32px;
+        }
+        /* BUTTONS */
+        .carousel-button-left a, .carousel-button-right a{
+            width: 25px;
+            height:36px;
+            position: relative;
+            top:140px;
+            cursor: pointer;
+            text-decoration: none;
+            opacity: 0.5;
+        }
+        .carousel-button-left a:hover, .carousel-button-right a:hover{
+            opacity: 1;
+        }
+        .carousel-button-left a{
+            float:left;
+            background: url(images/carousel-left.png);
+        }
+        .carousel-button-right a{
+            float:right;
+            background: url(images/carousel-right.png);
+        }
+        .shadow{
+            box-shadow: 0px 0px 32px #ee0045 ;
+        }
+/*--------Консультанты-------------*/
+.chat{
+    background-color:#ee0045;
+    width: 450px;
+    display: flex;
+    border-radius: 60px;
+    margin: 12px 5px;
+    padding: 10px;
+    transition: .3s linear;
+    float:left;
+}
+.chat p{
+    margin: 4px 0 0 20px;
+    padding: 4px;
+}
+/*--------Соц-медиа-------------*/
+.social{
+    background-color:#ee0045;
+    width: 450px;
+    display: flex;
+    border-radius: 60px;
+    margin: 12px auto;
+    padding: 14px 10px;
+    transition: .3s linear;
+}
+.social img{
+    margin: auto;
+    width: 80px;
+}
+/*-----------Обратная связь-------------*/
+form{
+    width:50%;
+    border-radius: 32px;
+    margin:50px auto;
+    padding:20px;
+    box-shadow: 0px 0px 8px 1px black;
+    background-color:#ee0045;
+}
+form p{
+    margin: 8px auto;
+    font-size: 20px;
+}
+input{
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    border: none;
+    border-bottom:1px solid black;
+}
+textarea{
+    font-size: 20px;
+    width: 100%;
+}
+form button{
+    margin-top: 20px;
+    border-radius: 20px;
+    color:white;
+    border: none;
+    font-size: 20px;
+    background: linear-gradient(to right, #220772 0%, #ee0045 51%,#220772 100%);
+    background-size: 200% auto;
+    width: 50%;
+    height: 40px;
+    transition: .5s;
+}
+form button:hover{
+    width: 80%;
+    background-position: right center;
+}
+/*---------БЛОК ТОВАРОВ-------------*/
+    
+    .accordion input{
+        display: none;
+    }
+    .accordion input:checked ~ .store{
+        display: flex;
+    }    
+    .accordion input:checked ~ #all{
+        width: 90%;
+    }
+    .accordion input:checked ~ #g{
+        width: 90%;
+    }
+    .accordion input:checked ~ #sk{
+        width: 90%;
+    }
+    .accordion input:checked ~ #s{
+        width: 90%;
+    }
+    .accordion input:checked ~ #brends{
+        width: 90%;
+    }
+    #all, #g, #sk, #s, #brends{
+        font-weight: 700;
+        background-color:#ee0045;
+        margin: 12px auto;
+        padding: 8px;
+        width: 50%;
+        border-radius: 20px;
+        transition: .2s linear;
+}
+    .store{
+        display: none;;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        width: 96%;
+}
+    .store .goods p{
+        margin: 0 auto;
+}
+    .store .goods{
+        background-color:#ee0045;
+        margin: 8px auto;
+        width: 30%;
+        height: 240px;
+        border-radius: 20px;
+        transition: .2s linear;
+}
+    .hide{
+        display: none;
+}
+    .store .goods:hover{
+        box-shadow: 0px 0px 10px 2px #ee0045;
+}
+    .store .goods:hover .hide{
+        display: block;
+}
+    .store .goods:hover p{
+        display: none;
+}
+    .store .goods img{
+        width: 200px;
+}
+hr{
+    color: #ee0045;
+}
+/*----------------ADPTAZIA------------------*/
+@media (max-width:960px){
+    .container{
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer';
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 960px;
+    }
+    hr{width: 90%;}
+    .header{
+        display:grid;
+        grid-template-rows: auto auto;
+        max-width: 960px;
+        width: 100%;
+        height: auto;
+        }
+    .logo{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .call{
+        display:flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: auto;
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .carousel{
+        width: 78%;
+    }
+    .carousel-block{
+        width: 48%;
+    }
+    .feature{
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .feature-items{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:24px;
+    }
+    .chat{
+        width: 95%;
+    }
+    .social{
+        width: 95%;
+    }
+}
+@media (max-width:735px){
+    .carousel-block{
+        width:20%;
+    }
+}

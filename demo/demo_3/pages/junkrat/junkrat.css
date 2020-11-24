@@ -1,0 +1,919 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    z-index: -1;
+    margin: 0 auto;
+    background-image: url(../../images/overwatch-body-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+p {
+    font-size: 20px;
+    margin: 8px auto;
+}
+
+a {
+    font-size: 20px;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 42px;
+    color: #4b535d;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 8px auto;
+}
+
+/*----------------------------Меню-------------------------------*/
+.header {
+    background-color: white;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    background: #0f1923;
+}
+
+.header-logo {
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.header-logo a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.header-logo a img {
+    width: 80px;
+    height: auto;
+}
+
+.header-logo a svg {
+    fill: white;
+    width: 300px;
+}
+
+.header-logo button {
+    width: 80px;
+    height: 80px;
+    margin: auto 0;
+    background: none;
+    border: none;
+    display: none;
+}
+
+.over-btn img {
+    width: 100%;
+}
+
+#menu1 {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    z-index: 10;
+}
+
+#menu1 ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+
+#menu1 ul li {
+    position: relative;
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+#menu1 ul li a {
+    display: block;
+    font-size: 28px;
+    padding: 19px 48px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: .2s linear;
+    text-height: bold;
+}
+
+#menu1 ul li img {
+    position: absolute;
+    top: 26px;
+    width: 24px;
+    margin: auto 8px;
+    transition: .2s linear;
+}
+
+#menu1 ul li .active {
+    opacity: 0;
+}
+
+#menu1 ul li:hover .not-active {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+#menu1 ul li:hover .active {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+#menu1 ul li > a:hover,
+#menu1 ul li:hover > a {
+    border-bottom: 4px solid rgb(255, 156, 0);
+    color: rgb(255, 156, 0);
+}
+
+#menu ul li .a-link {
+    border-bottom: 4px solid rgb(255, 156, 0);
+}
+
+#menu1 ul li ul {
+    position: absolute;
+    top: 78px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: #0f1923;
+}
+
+#menu1 ul li .sec-ul {
+    width: 120%;
+    height: auto;
+    background-color: #0f1923;
+}
+
+#menu1 ul li:hover ul {
+    display: block;
+}
+
+#menu1 ul li ul li {
+    float: none;
+    width: 100%;
+}
+
+#menu1 ul li ul li a {
+    display: block;
+    padding: 8px 0px;
+    text-transform: none;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#menu1 ul li ul li a:hover {
+    color: rgb(255, 156, 0);
+
+}
+
+/*----------------------------Контент-----------------------------*/
+.content {
+    z-index: -1;
+    display: absolute;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.content a,
+.buy-banner a {
+    text-decoration: none;
+    color: rgb(255, 156, 0);
+    border: 3px solid rgb(255, 156, 0);
+    padding: 10px;
+    font-size: 20px;
+    background: none;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.content a:hover,
+.buy-banner a:hover {
+    color: white;
+    transform: translate(5px, -5px);
+    background-color: rgb(255, 156, 0);
+    box-shadow: -5px 5px 0px 0px rgb(255, 124, 0), -4px 4px 0px 0px rgb(255, 124, 0), -3px 3px 0px 0px rgb(255, 124, 0), -2px 2px 0px 0px rgb(255, 124, 0), -1px 1px 0px 0px rgb(255, 124, 0);
+}
+
+.content a:active,
+.buy-banner a:focus {
+    transform: translate(0px, 0px);
+    background-color: rgb(255, 200, 0);
+    border: 3px solid rgb(255, 200, 0);
+    box-shadow: none;
+}
+
+.main-container {
+    opacity: 0;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0f1923;
+    box-shadow: 0px 0px 24px 1px black;
+    border-radius: 10px;
+}
+
+/*----------------------------Заголовок-----------------------------*/
+.abilities {
+    background-image: url(../../images/game/game_glow.png);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#h1 {
+    font-size: 64px;
+    color: #4b535d;
+}
+
+.hero-container {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 60px;
+    text-align: left;
+}
+
+.hero-container h2 {
+    width: 100%;
+    text-align: left;
+}
+
+.fotorama .slider-block video {
+    object-fit: contain;
+}
+
+.slider-block {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slider-block h1 {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 640px;
+    left: 0;
+    font-size: 64px;
+}
+
+.slider-block h2 {
+    position: absolute;
+    color: deepskyblue;
+    text-align: center;
+    width: 100%;
+    top: 760px;
+    left: 0;
+    font-size: 32px;
+}
+
+/*----------------------------Обзор и История--------------------------*/
+.hero-container:before {
+    content: '';
+    border-bottom: 30px solid white;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 10%;
+    position: absolute;
+    top: 934px;
+    left: 0px;
+}
+
+.hero-container:after {
+    content: '';
+    border-bottom: 30px solid white;
+    border-left: 30px solid transparent;
+    height: 0;
+    width: 10%;
+    position: absolute;
+    top: 934px;
+    right: 0px;
+}
+
+.hero-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    z-index: 2;
+    margin-top: 60px;
+    margin-right: 500px;
+}
+
+.hero-tabs .tablist {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.hero-tabs ul .panel {
+    border-radius: 8px 8px 0px 0px;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 14px 0;
+    border: none;
+    width: 49.8%;
+}
+
+.hero-tabs ul .pa {
+    color: white;
+    background-color: #304468;
+}
+
+.hero-tabs ul .pna {
+    color: #4b535d;
+    background-color: #e9ecfd;
+}
+
+.hero-tabs ul .panel li {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.hero-tabs ul a:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.hero-tabs ul .pna:hover {
+    transform: none;
+    box-shadow: inset 0 0 8px 0px #304468;
+}
+
+.hero-view {
+    display: flex;
+}
+
+.hero-story {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 24px;
+}
+
+.tabs {
+    background-color: #304468;
+    width: 100%;
+    color: white;
+}
+
+.tabs svg {
+    width: 27px;
+    fill: white;
+    margin-bottom: 4px;
+}
+
+.tabs h3,
+.tabs h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    color: deepskyblue;
+}
+
+.tabs h3,
+.hero-story h3,
+.hero-story h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: deepskyblue;
+}
+
+.tabs h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.hero-view {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tabs .role,
+.tabs .dificult {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tabs .dificult img {
+    width: 30px;
+
+}
+
+.tabs .description {
+    border-left: 6px solid deepskyblue;
+    width: 100%;
+    font-weight: normal;
+    margin: 8px 20px;
+    padding-left: 20px;
+}
+
+.tabs .skills {
+    padding: 20px;
+    border-top: 3px solid rgb(82, 99, 126);
+    width: 100%;
+}
+
+.tabs .skill_info {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    width: 100%;
+    margin: 4px auto;
+}
+
+.tabs .skill_info div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #2b3d60;
+}
+
+.tabs .skill_info div:nth-child(2) {
+    background-color: #2d4062;
+    padding: 16px;
+    width: 80%;
+}
+
+#story-tab ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+#story-tab ul li {
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#story-tab ul li p {
+    text-align: left;
+    width:100%;
+    margin: 0 0 0 16px;
+}
+
+#story-tab p {
+    text-align: left;
+    width:100%;
+}
+
+.hero-bg-img{
+    display: none;        
+    }
+
+.hero-bg {
+    position: absolute;
+}
+
+.hero-bg:before {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, hsla(0, 0%, 96.5%, 0) 0, #fff);
+}
+/*----------------------------hero-icons----------------------------*/
+.choose_hero{
+    background-image:url(background-story.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: 24px 0;
+}
+.choose_hero h1{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.heroes-icon {
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 24px auto;    
+}
+
+.heroes-icon a{
+    padding: 0;
+    border:none;
+    color: white;
+}
+.heroes-icon a:hover{
+    box-shadow: none;
+    background: none;
+    transform: none;
+}
+.heroes-icon a:focus{
+    border:none;
+    box-shadow: none;
+    background: none;
+    transform: none;
+}
+
+.icon-info {
+    width: 130px;
+    height: 130px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: .2s linear;
+}
+
+.icon-info div {
+    border: 3px solid rgb(255, 156, 0);
+    transform: skewX(-10deg);
+    background-color: #0f1923;
+    background-color: #0f1923;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    transition: .2s linear;
+    display: flex;
+    justify-content: column;
+    flex-wrap: wrap;
+    margin: 8px;
+}
+
+.icon-info div img {
+    transform: skewX(10deg);
+    width: 100%;
+    height: 100%;
+}
+
+.icon-info p {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 16px;
+}
+
+.icon-info:hover div {
+    border: 3px solid white;
+    background-color: rgb(255, 156, 0);
+    transform: skewX(-10deg) scale(1.1);
+}
+/*----------------------------Footer----------------------------*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer .buy-banner {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px;
+    background-image: url(../../images/social-bg.jpg);
+}
+
+.footer .social-banner {
+    width: 100%;
+    background-image: url(../../images/social-bg.jpg);
+    color: white;
+    text-align: center;
+}
+
+.footer .social-banner {
+    width: 100%;
+}
+
+.footer .social-banner ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.footer .social-banner ul li {
+    display: inline;
+    margin: 0 8px;
+}
+
+.footer .social-banner ul li:hover svg {
+    fill: rgb(255, 156, 0);
+}
+
+.footer .blizzard-banner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.footer .blizzard-banner .blizzard-link {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.footer .blizzard-banner img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer .blizzard-banner .footer-links {
+    margin: 32px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer .blizzard-banner .footer-links a {
+    color: black;
+}
+
+.footer .blizzard-banner .footer-links hr {
+    width: 1px;
+    height: 20px;
+    margiN-top: 0px;
+}
+
+.footer .blizzard-banner .link_12 {
+    margin: 8px auto;
+    width: 70px;
+    height: 70px;
+}
+
+.footer .blizzard-banner .link_12 img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer .blizzard-banner p {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .blizzard-banner a {
+    color: rgb(255, 156, 0);
+}
+
+.footer .blizzard-banner a:hover {
+    color: black;
+}
+
+/*---------------------------Медиа-запросы----------------------------*/
+@media only screen and (max-width:1280px) {
+    .header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .header-logo {
+        width: 10%;
+    }
+
+    .header-logo svg {
+        display: none;
+    }
+
+    #menu1 {
+        width: 100%;
+    }
+
+    .hero-tabs {
+        width: 70%;
+        margin-right: 200px;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 136px;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .header-logo svg {
+        display: block;
+    }
+
+    #menu1 {
+        width: 100%;
+    }
+
+    #menu1 ul li a {
+        padding: 8px 32px;
+
+    }
+
+    #menu1 ul li img {
+        top: 16px;
+        width: 24px;
+        margin: auto 8px;
+    }
+
+    #menu1 ul li ul {
+        top: 60px;
+        left: 0px;
+    }
+
+    .hero-container {
+        padding: 0px;
+    }
+
+    .fotorama {
+        display: none;
+    }
+
+    .hero-tabs {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .hero-bg {
+        display: none;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    .hero-bg-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image:url(glow-bg.jpg);
+        background-size: cover;
+        width: 100%;
+        height:700px;
+        margin-top:32px;
+    }
+    .hero-bg-img h1{
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    .hero-bg-img img{
+        margin:auto;
+        width: 50%;
+        height:600px;
+    }
+    .hero-tabs ul .panel {
+    border-radius: 0px;
+}
+}
+
+@media only screen and (max-width:640px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100px;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .header-logo button {
+        display: block;
+        transition: .2s linear;
+    }
+
+    .header-logo svg {
+        display: block;
+    }
+
+    #menu1 {
+        display: none;
+        width: 100%;
+        height: 0px;
+    }
+
+    #menu1 ul {
+        height: auto;
+        margin: 0;
+        flex-direction: column;
+        position: absolute;
+        justify-content: flex-start;
+        background-color: #0f1923;
+    }
+
+    #menu1 ul li {
+        text-align: left;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #menu1 ul li ul {
+        display: none;
+        top: 0;
+        position: relative;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        background-color: #0f1923;
+    }
+
+    #menu1 ul li .sec-ul {
+        width: 50%;
+    }
+
+    .header-logo a img {
+        height: 80px;
+        margin: auto 0;
+    }
+    .hero-bg-img{
+        margin-top:20px;
+    }
+    
+    .hero-bg-img img{
+        width: 90%;
+    }
+    p {
+        font-size: 16px;
+    }
+
+
+}

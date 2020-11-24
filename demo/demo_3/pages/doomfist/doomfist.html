@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Об игре - Overwatch</title>
+
+    <link rel="icon" type="image/x-icon" href="https://static.playoverwatch.com/img/favicon-696bc07714.ico">
+
+    <link rel="stylesheet" type="text/css" href="doomfist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="../../js.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../../heroChanges.js"></script>
+    <script src="script.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="header" id="menu">
+        <div class="header-logo">
+            <button onclick="MenuClick()" class="over-btn">
+                <img src="../../images/menu-btn.png">
+            </button>
+            <a href="../../index.html" class="main-button">
+                <img src="../../images/logo_white.png">
+                <svg class="HeaderSection-logo" viewBox="0 27 64 9.4">
+                    <g>
+                        <polygon fill="rgb(255,156,0)" points="10.71 27.11 12.11 29.09 9.32 29.09 10.71 27.11"></polygon>
+                        <polygon points="34.85 29.15 33.74 31.79 33.74 31.79 32.59 29.15 31.38 29.15 30.23 31.75 29.14 29.15 27.3 29.15 29.58 34.33 30.73 34.33 31.9 31.72 33.05 34.33 34.29 34.33 36.55 29.15 34.85 29.15"></polygon>
+                        <polygon points="60.55 29.15 60.55 30.97 57.38 30.97 57.38 29.15 55.6 29.15 55.6 34.33 57.38 34.33 57.38 32.33 60.55 32.33 60.55 34.33 62.31 34.33 62.31 29.15 60.55 29.15"></polygon>
+                        <polygon points="38.65 29.15 35.18 34.33 37.1 34.33 39.26 31 41.39 34.33 43.38 34.33 39.99 29.15 38.65 29.15"></polygon>
+                        <polygon points="14.56 29.15 12.61 29.15 10.64 32.3 8.7 29.15 6.7 29.15 9.96 34.33 11.17 34.33 14.56 29.15"></polygon>
+                        <polygon points="42.01 29.15 42.01 30.51 44.26 30.51 44.26 34.33 46.03 34.33 46.03 30.51 47.81 30.51 48.71 29.15 42.01 29.15"></polygon>
+                        <path d="M6,29.53a2.1,2.1,0,0,0-.61-.08H1.45c-.9,0-1.45.45-1.45,1.17v2.83a1.07,1.07,0,0,0,.61,1l.07,0,1.08-1.09V30.8h3.3v2.46H2.64L1.27,34.62h4.1c.86,0,1.46-.48,1.46-1.17V30.76L6,29.54Z" transform="translate(0 -0.29)"></path>
+                        <path d="M53.41,29.44H49.87l-.28,0h-.05l-.15.24h0l-1,1.47v2.27c0,.69.6,1.17,1.45,1.17h3.53a1.31,1.31,0,0,0,1.46-1.17v-.89H53.1v.7H50.18V30.8H53.1v.6h1.77v-.78C54.87,29.91,54.29,29.44,53.41,29.44Z" transform="translate(0 -0.29)"></path>
+                        <polygon points="14.47 30.45 14.47 34.33 19.95 34.33 19.95 32.97 16.24 32.97 16.24 32.31 18.74 32.31 18.74 31.13 16.24 31.13 16.24 30.51 19.95 30.51 19.95 29.15 15.37 29.15 14.47 30.45"></polygon>
+                        <path d="M25.66,32.68c.63,0,1.31-.33,1.31-.94V30.5c0-.65-.51-1.06-1.33-1.06H20.73v5.18H22.5V30.77h2.77s0,0,0,.05v.78h0a.19.19,0,0,1-.1,0H23.3v1l2.17,1.95h2.42l-2.23-1.94Z" transform="translate(0 -0.29)"></path>
+                        <polygon fill="rgb(255,156,0)" points="39.28 36.31 37.88 34.33 40.67 34.33 39.28 36.31"></polygon>
+                        <path d="M63.32,29.59h.26l.07,0a.16.16,0,0,1,.05.13.15.15,0,0,1-.13.17l.18.24h-.16l-.15-.22v.22h-.13Zm.13.1v.15h.09a.07.07,0,0,0,0-.06.07.07,0,0,0,0-.06l-.08,0Z" transform="translate(0 -0.29)"></path>
+                        <path d="M63.5,30.37a.5.5,0,1,1,.5-.5A.5.5,0,0,1,63.5,30.37Zm.41-.5a.41.41,0,1,0-.41.41A.41.41,0,0,0,63.91,29.87Z" transform="translate(0 -0.29)"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <nav id="menu1">
+            <ul>
+                <li><a href="">Игра
+                        <img class="not-active" src="../../images/expand_arrow.png">
+                        <img class="active" src="../../images/expand_arrow_active.png">
+                    </a>
+                    <ul>
+                        <li><a href="../game.html">Об игре</a></li>
+                        <li><a href="../maps.html">Поля боя</a></li>
+                    </ul>
+                </li>
+                <li><a href="../heroes.html">Герои</a></li>
+                <li><a href="../materials/materials.html">Материалы</a></li>
+                <li><a href="https://overwatch2.playoverwatch.com/ru-ru/trailer">Overwatch 2</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="abilities">
+            <div class="fotorama" data-swipe="false" data-click="false" data-autoplay="10000" data-width="1920" data-height="854" data-loop="true" data-stopautoplayontouch="false" data-keyboard="true">
+
+                <div class="slider-block">
+                    <video autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/intro-video.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                </div>
+                <div class="slider-block">
+                    <video autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/ability-hand-cannon/video-ability.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                    <h2>БОМБАРДА</h2>
+                </div>
+                <div class="slider-block">
+                    <video autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/ability-seismic-slam/video-ability.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                    <h2>ДРОЖЬ ЗЕМЛИ</h2>
+                </div>
+                <div class="slider-block">
+                    <video width="1920" autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/ability-rising-uppercut/video-ability.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                    <h2>АППЕРКОТ</h2>
+                </div>
+                <div class="slider-block">
+                    <video autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/ability-rocket-punch/video-ability.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                    <h2>РЕАКТИВНЫЙ УДАР</h2>
+                </div>
+                <div class="slider-block">
+                    <video autoplay="autoplay" loop="loop" muted="muted" poster="staticposter.gif">
+                        <source src="https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/ability-meteor-strike/video-ability.mp4" type="video/mp4">
+                    </video>
+                    <h1>КУЛАК СМЕРТИ</h1>
+                    <h2>УДАР МЕТЕОРА</h2>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-bg">
+                <video autoplay loop muted>
+                    <source src="bg-video.mp4">
+                </video>
+            </div>
+            <div class="hero-bg-img">
+                <h1>КУЛАК СМЕРТИ</h1>
+                <img src="doomfist.png">
+            </div>
+            <div class="hero-tabs">
+                <ul class="tablist">
+                    <a onclick="click1()" id="overview" class="panel pa">
+                        <li>ОБЗОР</li>
+                    </a>
+                    <a onclick="click2()" id="story" class="panel pna">
+                        <li>ИСТОРИЯ</li>
+                    </a>
+                </ul>
+                <div class="tabs">
+                    <div class="hero-view show" id="overview-tab">
+                        <div class="role">
+                            <h3>РОЛЬ</h3>
+                            <h1>УРОН <svg viewBox="0 0 32 32" role="presentation">
+                                    <title>Damage</title>
+                                    <g>
+                                        <rect x="2.1" y="28.1" width="7.1" height="3.9"></rect>
+                                        <path d="M9.1,7c0,0,0-0.5,0-0.7C8.6,1.5,5.6,0,5.6,0s-3,1.5-3.5,6.3c0,0.2,0,0.7,0,0.7v18.4h3.5h3.5V7z"></path>
+                                    </g>
+                                    <g>
+                                        <rect x="12.5" y="28.1" width="7.1" height="3.9"></rect>
+                                        <path d="M19.5,7c0,0,0-0.5,0-0.7C19,1.5,16,0,16,0s-3,1.5-3.5,6.3c0,0.2,0,0.7,0,0.7v18.4H16h3.5V7z"></path>
+                                    </g>
+                                    <g>
+                                        <rect x="22.9" y="28.1" width="7.1" height="3.9"></rect>
+                                        <path d="M29.9,7c0,0,0-0.5,0-0.7C29.4,1.5,26.4,0,26.4,0s-3,1.5-3.5,6.3c0,0.2,0,0.7,0,0.7v18.4h3.5h3.5V7z"></path>
+                                    </g>
+                                </svg>
+                            </h1>
+                        </div>
+                        <div class="dificult">
+                            <h3>СЛОЖНОСТЬ</h3>
+                            <div>
+                                <img src="star_full.png">
+                                <img src="star_full.png">
+                                <img src="star_full.png">
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Многочисленные имплантаты делают Кулака Смерти мобильным и мощным бойцом передовой. Он может вести огонь из своей бомбарды, сотрясать земную твердь, подбрасывать противников в воздух и выводить их из равновесия, а также врываться в гущу боя, используя «Реактивный удар». А встретив группу противников, он не упустит шанса обрушить на них с небес «Удар метеора».</p>
+                        </div>
+                        <div class="skills">
+                            <h3>СПОСОБНОСТИ</h3>
+                            <div class="skill_info">
+                                <div>
+                                    <img width="100px" src="slider-2.png">
+                                </div>
+                                <div>
+                                    <h2>БОМБАРДА</h2>
+                                    <p>Левая рука Кулака Смерти – усовершенствованный протез со встроенной бомбардой, которая имеет небольшую дальность стрельбы и автоматически восстанавливает заряд.</p>
+                                    <p>Урон: максимально до 66 ед за выстрел (11 дробинок по 6 единиц урона), Обойма: 4, Скорострельность: 2 выстрела в сек., Перезарядка: 0,65 сек (1 патрон), макс. — 2.6 сек</p>
+                                </div>
+                            </div>
+                            <div class="skill_info">
+                                <div>
+                                    <img width="100px" src="slider-3.png">
+                                </div>
+                                <div>
+                                    <h2>ДРОЖЬ ЗЕМЛИ</h2>
+                                    <p>Кулак Смерти прыгает вперед и бьет кулаком по земле, оглушая противников и подтягивая их к себе.</p>
+                                    <p>Урон: 9-125 (зависит от высоты падения), Перезарядка: 6 сек, Радиус: 15 м</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="skill_info">
+                                <div>
+                                    <img width="72px" src="slider-4.png">
+                                </div>
+                                <div>
+                                    <h2>АППЕРКОТ</h2>
+                                    <p>Кулак Смерти ударом подбрасывает в воздух противника, стоящего перед ним.</p>
+                                    <p>Урон: 50, Перезарядка: 6 сек</p> 
+                                    <p>+ Лучшая защита (пассивная): когда любые способности Кулака Смерти наносит урон, он на время получает щит (+30 за попадание, +75 за ликвидацию, максимально - 150, снижение щитов - 3 ед/сек)</p>
+                                </div>
+                            </div>
+                            <div class="skill_info">
+                                <div>
+                                    <img width="72px" src="slider-5.png">
+                                </div>
+                                <div>
+                                    <h2>РЕАКТИВНЫЙ УДАР</h2>
+                                    <p>После подготовки Кулак Смерти бросается вперед и отбрасывает противника. Пораженный противник получает дополнительный урон, если врезается в стену.</p>
+                                    <p>Урон: 49-100 (+49-150 если враг врезается в стену), Перезарядка: 4 сек, Радиус: 11-30 м</p>
+                                </div>
+                            </div>
+                            <div class="skill_info">
+                                <div>
+                                    <img width="72px" src="slider-6.png">
+                                </div>
+                                <div>
+                                    <h2>УДАР МЕТЕОРА</h2>
+                                    <p>Кулак Смерти высоко подпрыгивает. Приземляясь, он бьет кулаком по земле, нанося значительный урон.</p>
+                                    <p>Урон: 200 в центре (урон снижается по мере отдаления от центра), Радиус: 7 метров, Скорость передвижения (м/c): +200%</p>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                    <div class="hero-story hidden" id="story-tab">
+                        <h3>БИОГРАФИЯ</h3>
+                        <ul>
+                            <li>
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <path fill="none" d="M27.8,20.1L27.8,20.1l-0.1,1.2h0.8c-0.1-0.3-0.3-0.6-0.4-0.9C28.1,20.3,28,20.1,27.8,20.1z"></path>
+                                    <path fill="none" d="M14.6,20.6c-0.1,0.2-0.2,0.5-0.3,0.7H15v-1.2C14.8,20.2,14.7,20.4,14.6,20.6z"></path>
+                                    <polygon fill="none" points="22,23.8 22.3,23.6 21.8,23.6 "></polygon>
+                                    <path d="M31.1,19c-0.8-2.2-2.1-2.4-4.1-3.2c-0.2-0.1-0.4-0.2-0.6-0.4c-0.4,0-0.6-0.3-0.8-0.6c-0.7-0.9-1.2-1.1-1.7-2.1
+			c-0.4-0.8-0.3-1.4,0.3-2.1c1.3-1.4,1.5-3,1.3-4.8c0-0.1,0-0.1,0-0.2c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.3-0.1-0.4,0
+			c-0.6,0.4-1.3-0.2-1.9,0.3l-0.1,0.1c-0.1,0-0.8,1-0.8,0.8c-0.1-0.3-0.1-0.5,0.2-0.7c0.6-0.5,1.2-1.1,1.9-1.5c0.1,0,0.2,0,0.2-0.1
+			C24.4,4.1,24.7,4,25,3.9c-0.5-1-1.5-1.7-2.8-1.8c-2.9-0.3-4.1,1-4.4,2.3c-0.5,2.4-0.8,4.2,1.1,6.2c0.3,0.4,0.6,0.8,0.4,1.3
+			c-0.6,1.6-1.5,2.3-2.7,3.6c-0.1,0-0.1-0.1-0.1-0.1c-0.1,0.1-0.2,0.2-0.3,0.2c-0.4,0.2-0.9,0.2-1.4,0.4c-1.4,0.4-2.1,1.5-2.6,2.8
+			l9.5,5.5h0.5l8.9-5.1C31.2,19.1,31.1,19,31.1,19z"></path>
+                                    <path d="M2.4,27.3c0.3-0.1,0.6,0,0.9,0c0.4,0,0.5,0,0.6-0.4C4,26.8,4,26.6,4.1,26.4c-0.3-0.1-0.5-0.3-0.5-0.7V10.4
+			c0-0.4,0.3-0.7,0.7-0.7h8.8l0.8-3.5H4.3C2,6.1,0.2,8,0.2,10.3v15.4c0,0.6,0.1,1.2,0.4,1.7C1.1,27.5,1.8,27.5,2.4,27.3z"></path>
+                                    <path d="M28.7,24.6v1.1c0,0.4-0.3,0.7-0.7,0.7H4.3l0,0c0,0.2-0.1,0.4,0,0.6c0.1,0.3-0.2,0.4-0.4,0.6c-0.4,0.3-0.9,0.5-1.3,0.8
+			c-0.3,0.2-0.7,0.3-1,0.5C2.3,29.6,3.3,30,4.4,30H28c2.3,0,4.2-1.9,4.2-4.2v-3.1L28.7,24.6z"></path>
+                                </svg>
+                                <p>Настоящее имя: Аканде Огундиму, Возраст: 45 лет</p>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <polygon points="12.8,1.4 9.5,5.6 12.7,10.5 14.5,10.6 12.3,5.6 14.1,3.2 14.1,3.2 14.9,4.1 17.2,4.1 17.9,3.1 18,3.1 19.9,5.9 
+		17.4,10.6 19.2,10.6 22.5,5.7 19.3,1.4 	"></polygon>
+                                    <g>
+                                        <path d="M3.1,28c0.4,0,0.5,0,0.6-0.4c0.1-0.2,0.1-0.4,0.2-0.6c-0.3-0.1-0.5-0.3-0.5-0.7V12.1V11c0-0.4,0.3-0.7,0.7-0.7h23.8l0,0
+				c0-0.2,0.1-0.4,0-0.6c-0.1-0.3,0.2-0.4,0.4-0.6c0.4-0.3,0.9-0.5,1.3-0.8c0.3-0.2,0.7-0.3,1-0.5c-0.7-0.7-1.7-1.1-2.8-1.1H13.7H4.2
+				C1.9,6.8,0,8.7,0,11v3.1v12.4c0,0.6,0.1,1.2,0.4,1.7c0.6,0,1.2,0,1.8-0.1C2.5,28,2.8,28,3.1,28z"></path>
+                                        <path d="M31.6,9.3c-0.6,0-1.2,0-1.8,0.1c-0.3,0.1-0.6,0-0.9,0c-0.4,0-0.5,0-0.6,0.4c-0.1,0.2-0.1,0.4-0.2,0.6
+				c0.3,0.1,0.5,0.3,0.5,0.7v14.3v1.1c0,0.4-0.3,0.7-0.7,0.7H4.1l0,0c0,0.2-0.1,0.4,0,0.6c0.1,0.3-0.2,0.4-0.4,0.6
+				c-0.4,0.3-0.9,0.5-1.3,0.8c-0.3,0.2-0.7,0.3-1,0.5c0.7,0.7,1.7,1.1,2.8,1.1h14.1h9.5c2.3,0,4.2-1.9,4.2-4.2v-3.1V11
+				C32,10.4,31.9,9.8,31.6,9.3z"></path>
+                                    </g>
+                                    <path d="M29.4,16.1l-0.5-5.6l-1.3-0.3c0,0-17.2-1-17.4-1S3.7,9.3,3.5,9.3s-1,1.7-1,1.7l0.6,5.2l3.5,3.1h9.2c0,0-0.1,0-0.1-0.1
+			L11,14.4c-0.2-0.2,0.1-0.6,0.3-0.4l4.6,2.1c0.1,0.1,0.2,0.1,0.3,0l4.6-2.1c0.3-0.2,0.6,0.2,0.3,0.4l-4.8,4.8c0,0-0.1,0-0.1,0.1H25
+			L29.4,16.1z"></path>
+                                    <path d="M16.1,19.3h-0.2C16,19.3,16,19.3,16.1,19.3z"></path>
+                                    <path d="M28.9,28c-0.4,0-0.5,0-0.6-0.4c-0.1-0.2-0.1-0.4-0.2-0.6c0.3-0.1,0.5-0.3,0.5-0.7V12.1V11c0-0.4-0.3-0.7-0.7-0.7H4.1l0,0
+			c0-0.2-0.1-0.4,0-0.6c0.1-0.3-0.2-0.4-0.4-0.6C3.3,8.9,2.9,8.6,2.4,8.4C2,8.3,1.7,8.1,1.4,7.9c0.7-0.7,1.7-1.1,2.8-1.1h14.1h9.5
+			c2.3,0,4.2,1.9,4.2,4.2v3.1v12.4c0,0.6-0.1,1.2-0.4,1.7c-0.6,0-1.2,0-1.8-0.1C29.5,28,29.2,28,28.9,28z"></path>
+                                </svg>
+                                <p>Род занятий: наемник</p>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <path d="M30,16.4l-2.1,2.1l-2.1-2.1h-1.7L23.5,17l-3.1-3v-1.4h-3l-1.7-1.7L13.6,13h2.3l0.9,0.9h2.4l4,4v1.3l-2.4,2.4v3.9l-2.9,2.9
+			h-1.2l-1.9-1.9v-5L13.5,20h-2.1l-2.2-2.2v-2.3l3-2.5v-2.8l4.9-4.9l1.5,1.5H22l2.5-2.5c-2.4-1.7-5.3-2.8-8.5-2.8
+			c-3,0-5.7,0.9-8,2.4h6.4l-3,3h-2L8,8.4H6.8V4.8c-0.7,0.6-1.4,1.3-2,2v3.1L2,12.8c-0.2,1-0.3,2-0.3,3.1c0,0.4,0,0.8,0.1,1.2L8.3,22
+			v2.3l-2,2c2.6,2.4,6.1,3.9,9.9,3.9c7.7,0,13.9-6,14.4-13.6L30,16.4z M22.1,25.2h-0.8v-3.7h0.8V25.2z"></path>
+                                    <path fill="none" d="M29.9,16c0-7.6-6.2-13.8-13.8-13.8C8.4,2.2,2.2,8.4,2.2,16c0,4.8,2.4,9,6.1,11.5c0.4,0,0.8-0.1,1.2-0.2
+			s0.8,0,1.2,0c0.5,0,0.7,0,0.8-0.5c0.3-0.8,0.4-1.7,0.5-2.5c0-0.2,0.1-0.3,0.2-0.5c0.1,0.6,0,1.2-0.2,1.8c-0.1,0.4-0.2,0.8-0.1,1.3
+			c0.1,0.4-0.2,0.6-0.5,0.7c-0.4,0.3-0.9,0.6-1.4,0.8c1.8,0.9,3.8,1.4,6,1.4C23.7,29.8,29.9,23.6,29.9,16z"></path>
+                                    <path d="M16,0C7.2,0,0,7.2,0,16c0,4.9,2.2,9.2,5.6,12.2c0.2-0.5,0.5-0.7,1.1-0.6c0.5,0,1.1,0,1.6,0C4.6,25,2.2,20.8,2.2,16
+			C2.2,8.4,8.4,2.2,16,2.2S29.8,8.4,29.8,16S23.6,29.8,16,29.8c-2.1,0-4.1-0.5-6-1.4c-0.1,0-0.2,0.1-0.3,0.2c-0.7,0.3-1.3,0.7-2,1
+			c0,0,0,0-0.1,0C10.2,31.2,13,32,16,32c8.8,0,16-7.2,16-16S24.8,0,16,0z"></path>
+                                </svg>
+                                <p>Оперативная база: Ойо, Нигерия</p>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <polygon fill="none" points="20.8,8 17,-3.8 13.2,8 0.7,8 10.8,15.3 6.9,27.2 17,19.8 27.1,27.2 23.2,15.3 33.3,8 "></polygon>
+                                    <polygon fill="none" points="20.8,8 17,-3.8 13.2,8 0.7,8 10.8,15.3 6.9,27.2 17,19.8 27.1,27.2 23.2,15.3 33.3,8 "></polygon>
+                                    <path d="M28.8,2.3c-0.2-0.2-0.5-0.1-0.8,0c0.6,0.2,0.9,0.6,1.3,0.9c-0.4,0-0.6-0.2-1-0.3c-0.1,0-0.3-0.1-0.4,0
+			c-0.6,0.4-1.3,0.5-1.9,1L25.9,4c-0.1,0-0.8-0.4-0.8-0.6C25,3.1,25,2.9,25.3,2.7c0.6-0.5,1.2-1.1,2-1.5c0.1,0,0.2,0,0.2-0.1
+			c0.1-0.4,0.4-0.6,0.9-0.6c0.4,0,0.7,0,1.1,0c-0.5-0.4-1.2-0.6-1.9-0.6H5.3c-1.9,0-3.5,1.6-3.5,3.5v17.9c0,1.1,0.5,2,1.2,2.7v0.3
+			l4.4,2.5c0.2-0.3,0.6-0.5,1.1-0.4c1.1,0,2.1,0,3.2-0.2c0.4-0.1,0.9-0.1,1.3,0c0.5,0.1,0.8,0,0.9-0.5c0.3-0.9,0.4-1.9,0.6-2.9
+			c0-0.2,0.1-0.4,0.2-0.5c0.1,0.7,0,1.4-0.2,2.1c-0.1,0.5-0.3,0.9-0.2,1.4c0.1,0.4-0.3,0.6-0.5,0.8c-0.6,0.4-1.2,0.8-1.9,1.1
+			c-0.6,0.3-1.1,0.5-1.7,0.9l6.1,3.5l13.4-7.7v-0.2c0.8-0.6,1.3-1.6,1.3-2.7V3.6c0-0.7-0.2-1.4-0.6-1.9c-0.4,0.2-0.8,0.4-1.2,0.7
+			C29.1,2.4,29,2.4,28.8,2.3z M23.9,23.8l-7-5.1l-7,5.1l2.7-8.3l-7-5.1h8.7L17,2.1l2.7,8.3h8.7l-7,5.1L23.9,23.8z"></path>
+                                </svg>
+                                <p>Принадлежность: Глава Когтя</p>
+                            </li>
+                        </ul>
+                        <h3>«ПРОГРЕСС НЕВОЗМОЖЕН БЕЗ ЖЕРТВ».</h3>
+                        <p>Вскоре после освобождения из тюрьмы Кулак Смерти вновь начал строить планы по вовлечению всего мира в глобальную войну. Он верит, что только она способна сделать человечество сильнее.</p>
+                        <p>Аканде Огундиму был наследником уважаемой нигерийской семьи, владеющей компанией, которая занималась разработкой протезов. Он с детства обладал острым умом и природным обаянием, которые помогали ему расширять и укреплять семейный бизнес. Свободное время он посвящал своему любимому увлечению — боевым искусствам. Аканде изучал как традиционные африканские системы вроде дамбе или гидигбу, так и более современные; он заимствовал из них лучшие приемы и планомерно создавал собственный стиль. Огундиму участвовал в турнирах по всему континенту и неизменно одерживал верх благодаря своей интуиции, способности угадывать движения противников и поистине невероятной силе и скорости.</p>
+                        <p>Однако все изменилось после Восстания машин, во время которого он потерял руку. Аканде оправился от ран, а кибернетический протез собственной компании даже сделал его сильнее, но эти изменения навсегда закрыли ему дорогу на соревнования. Огундиму попытался с головой уйти в работу, сосредоточив все свои силы и рвение на развитии бизнеса. Но заполнить пустоту в душе он так и не сумел... пока не познакомился с Акинджиде Адейеми — вторым Кулаком Смерти, Карателем из Нумбани.</p>
+                        <p>Адейеми предложил Огундиму стать наемником и сражаться вместе с ним. Аканде, поколебавшись, принял это предложение и вскоре смог на практике применять свои новые способности. В какой-то момент Адейеми привел его в «Коготь». Вера организации в то, что войны сделают человечество сильнее, очень импонировала Огундиму. К тому же, возможности «Когтя» позволили ему проявить себя не только на поле боя, но и в дипломатических переговорах.</p>
+                        <p>Адейеми был ценным сотрудником «Когтя», но в Огундиму организация видела куда больший потенциал. Он был умным и талантливым командиром, способным вдохновить подчиненных. Кроме того, Аканде не желал ограничиваться нападениями на Нумбани, которыми командовал Адейеми. Разница во взглядах привела к тому, что Огундиму убил своего учителя и забрал его перчатку — а с ней и титул Кулака Смерти.</p>
+                        <p>Став Кулаком Смерти, Огундиму завоевал уважение «Когтя» и начал помогать в планировании конфликта, который, как надеялась организация, со временем перерастет в глобальное противостояние. Но этим планам не суждено было сбыться. Аканде вступил в схватку с ударной группой Overwatch, состоящей из Трейсер, Уинстона и Гэндзи — и был побежден. Его взяли под стражу и заключили в надежно охраняемую тюрьму на долгие годы; сам же Аканде терпеливо ждал, когда произойдут события, которые он давно запланировал.</p>
+                        <p>В назначенный срок Огундиму почувствовал, что пришла пора вернуться. Он сбежал из тюрьмы и, легко расправившись с роботами-защитниками Нумбани OR15, вернул себе перчатку Кулака Смерти. В данный момент Аканде вернулся в совет «Когтя» и готовится развязать новую глобальную войну.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="choose_hero">
+            <h1>ВЫБЕРИТЕ ГЕРОЯ</h1>
+            <div class="heroes-icon">
+                <a href="../d.va/d.va.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/d.va.png">
+                        </div>
+                        <p>D.VA</p>
+                    </div>
+                </a>
+
+                <a href="../ana/ana.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/ana.png">
+                        </div>
+                        <p>Ана</p>
+                    </div>
+                </a>
+
+                <a href="../mercy/mercy.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/mercy.png">
+                        </div>
+                        <p>Ангел</p>
+                    </div>
+                </a>
+
+                <a href="../bastion/bastion.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/bastion.png">
+                        </div>
+                        <p>Бастион</p>
+                    </div>
+                </a>
+
+                <a href="../baptiste/baptiste.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/baptist.png">
+                        </div>
+                        <p>Батист</p>
+                    </div>
+                </a>
+
+                <a href="../brigitte/brigitte.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/briggita.png">
+                        </div>
+                        <p>Бригитта</p>
+                    </div>
+                </a>
+
+                <a href="../genji/genji.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/genji.png">
+                        </div>
+                        <p>Гендзи</p>
+                    </div>
+                </a>
+
+                <a href="../dzen/dzen.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/dzen.png">
+                        </div>
+                        <p>Дзенъятта</p>
+                    </div>
+                </a>
+
+                <a href="../reaper/reaper.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/reaper.png">
+                        </div>
+                        <p>Жнец</p>
+                    </div>
+                </a>
+
+                <a href="../zarya/zarya.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/zarya.png">
+                        </div>
+                        <p>Заря</p>
+                    </div>
+                </a>
+
+                <a href="../junkrat/junkrat.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/junkrat.png">
+                        </div>
+                        <p>Крысавчик</p>
+                    </div>
+                </a>
+
+                <a href="doomfist.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/doomfist.png">
+                        </div>
+                        <p>Кулак смерти</p>
+                    </div>
+                </a>
+
+                <a href="../lucio/lucio.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/lucio.png">
+                        </div>
+                        <p>Люсио</p>
+                    </div>
+                </a>
+
+                <a href="../mccree/mccree.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/mccree.png">
+                        </div>
+                        <p>Маккри</p>
+                    </div>
+                </a>
+
+                <a href="../moira/moira.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/moira.png">
+                        </div>
+                        <p>Мойра</p>
+                    </div>
+                </a>
+
+                <a href="../mei/mei.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/mei.png">
+                        </div>
+                        <p>Мэй</p>
+                    </div>
+                </a>
+
+                <a href="../orisa/orisa.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/orisa.png">
+                        </div>
+                        <p>Ориса</p>
+                    </div>
+                </a>
+
+                <a href="../reinhardt/reinhardt.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/reinhardt.png">
+                        </div>
+                        <p>Райнхардт</p>
+                    </div>
+                </a>
+
+                <a href="../widowmaker/widowmaker.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/widowmaker.png">
+                        </div>
+                        <p>Роковая вдова</p>
+                    </div>
+                </a>
+
+                <a href="../sigma/sigma.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/sigma.png">
+                        </div>
+                        <p>Сигма</p>
+                    </div>
+                </a>
+
+                <a href="../symmetra/symmetra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/symmetra.png">
+                        </div>
+                        <p>Симметра</p>
+                    </div>
+                </a>
+
+                <a href="../soldier76/soldier76.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/soldier-76.png">
+                        </div>
+                        <p>Солдат-76</p>
+                    </div>
+                </a>
+
+                <a href="../sombra/sombra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/sombra.png">
+                        </div>
+                        <p>Сомбра</p>
+                    </div>
+                </a>
+
+                <a href="../hammond/hammond.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/hammond.png">
+                        </div>
+                        <p>Таран</p>
+                    </div>
+                </a>
+
+                <a href="../torbjorn/torbjorn.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/torbjorn.png">
+                        </div>
+                        <p>Торбьорн</p>
+                    </div>
+                </a>
+
+                <a href="../tracer/tracer.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/tracer.png">
+                        </div>
+                        <p>Трейсер</p>
+                    </div>
+                </a>
+
+                <a href="../roadhog/roadhog.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/roadhog.png">
+                        </div>
+                        <p>Турбосвин</p>
+                    </div>
+                </a>
+
+                <a href="../winston/winston.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/winston.png">
+                        </div>
+                        <p>Уинстон</p>
+                    </div>
+                </a>
+
+                <a href="../pharra/pharra.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/pharra.png">
+                        </div>
+                        <p>Фарра</p>
+                    </div>
+                </a>
+
+                <a href="../hanzo/hanzo.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/hanzo.png">
+                        </div>
+                        <p>Хандзо</p>
+                    </div>
+                </a>
+
+                <a href="../echo/echo.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/echo.png">
+                        </div>
+                        <p>Эхо</p>
+                    </div>
+                </a>
+
+                <a href="../ashe/ashe.html">
+                    <div class="icon-info">
+                        <div>
+                            <img src="../../images/heroes-icon/ashe.png">
+                        </div>
+                        <p>Эш</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="buy-banner">
+            <a href="https://eu.shop.battle.net/ru-ru/product/overwatch?blzcmp=ow_buy_bot">ПРИОБРЕСТИ</a>
+        </div>
+        <div class="social-banner">
+            <h2 class="SocialModule-title">БУДЬТЕ НА СВЯЗИ!</h2>
+            <ul class="social-links">
+                <li><a href="https://vk.com/overwatchru">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" fill=white viewBox="0 0 192 192">
+                            <title>VK</title>
+                            <g>
+                                <path d="M157.233993,66.1462211 C158.123557,63.1797719 157.233994,61 153.000244,61 L139.000244,61 C135.440505,61 133.799415,62.8830035 132.909356,64.9593945 C132.909356,64.9593945 125.789878,82.3129373 115.704198,93.5851974 C112.441227,96.8481681 110.957879,97.8863636 109.178009,97.8863636 C108.288198,97.8863636 107,96.8481681 107,93.8819658 L107,66.1462211 C107,62.586482 105.96694,61 103.000244,61 L81.0002441,61 C78.7757158,61 77.4378669,62.6521562 77.4378669,64.2179674 C77.4378669,67.5925348 82.4804603,68.3707494 83.0002441,77.8633869 L83.0002441,98.4799003 C83.0002441,103 82.1839388,103.819509 80.4040693,103.819509 C75.6579974,103.819509 64.1131647,86.388441 57.2660122,66.4427426 C55.9241353,62.5659897 54.5782535,61 51.0002441,61 L37.0002441,61 C33.0002441,61 32.2001953,62.8830035 32.2001953,64.9593945 C32.2001953,68.6675178 36.9465141,87.059256 54.2998099,111.383646 C65.8685915,127.995268 82.1682449,137 97.0002441,137 C105.899345,137 107.000244,135 107.000244,131.555007 L107.000244,119 C107.000244,115 107.843292,114.201711 110.661357,114.201711 C112.737749,114.201711 116.297488,115.239906 124.603545,123.249196 C134.095936,132.741586 135.660882,137 141.000244,137 L155.000244,137 C159.000244,137 161.000244,135 159.846475,131.053112 C158.583906,127.119411 154.051802,121.412135 148.038124,114.646617 C144.774906,110.790356 139.88045,106.637574 138.397102,104.560689 C136.320711,101.891255 136.914001,100.704429 138.397102,98.3315162 C138.397102,98.3315162 155.454123,74.3036478 157.233993,66.1462211 Z"></path>
+                            </g>
+                        </svg>
+                    </a></li>
+                <li><a href="https://twitter.com/OverwatchRU">
+                        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="social-twitter" viewBox="0 0 64 64" width="100px" fill="white" height="100px">
+                            <title>Twitter</title>
+                            <path d="M54,18.9c-1.4,0.7-2.9,1.1-4.5,1.3c3.6-2.4,3.4-4.9,3.4-4.9c-1.7,1-3.5,1.8-5.5,2.2c-3.3-3.5-8.8-3.7-12.3-0.4         c-2.3,2.1-3.2,5.3-2.5,8.3h-0.4c-10.7-0.5-17.4-9-17.4-9c-3.8,7.4,2.3,11.5,2.3,11.5c-1.3,0-2.5-0.3-3.6-1c0.1,7.1,6.8,8.6,6.8,8.6         c-1.2,0.3-2.4,0.4-3.6,0.2c1.2,5.4,7.7,6.1,7.7,6.1C21.2,45.3,12,45.4,12,45.4c11.5,7.3,26.7,3.9,34-7.6c2.5-3.9,3.8-8.5,3.8-13.2         c0-0.3,0-0.5,0-0.8s0-0.3,0-0.4v-0.1C51.6,22.2,53,20.7,54,18.9z"></path>
+                        </svg>
+                    </a></li>
+
+                <li><a href="https://www.youtube.com/OverwatchRU">
+                        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="social-youtube" fill="white" viewBox="0 0 64 64" width="100px" height="100px">
+                            <title>Youtube</title>
+                            <path d="M55.9,32a54.4,54.4,0,0,0-.5-8.3c-.6-4.3-1.9-5.9-2.7-6.8a5.9,5.9,0,0,0-2.9-1.2s-5.5-.4-16-.4H30.1c-10.5,0-16,.4-16,.4a5.9,5.9,0,0,0-2.9,1.2c-.8.9-2.1,2.5-2.7,6.8A54.5,54.5,0,0,0,8.1,32h0a54.5,54.5,0,0,0,.5,8.3c.6,4.3,1.9,5.9,2.7,6.8a5.9,5.9,0,0,0,2.9,1.2s5.5.4,16,.4h3.7c10.5,0,16-.4,16-.4a5.9,5.9,0,0,0,2.9-1.2c.8-.9,2.1-2.5,2.7-6.8a54.4,54.4,0,0,0,.5-8.3ZM27.1,40.9V23.2L40.8,32Z"></path>
+                        </svg>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="blizzard-banner">
+            <a class="blizzard-link" href="https://www.blizzard.com/" title="Blizzard Home">
+                <img src="../../images/blizzard.png">
+            </a>
+            <nav class="footer-links">
+                <a href="https://careers.blizzard.com/ru-ru/">ВАКАНСИИ</a>
+                <hr>
+                <a href="https://www.blizzard.com/ru-ru/company/about/">О КОМПАНИИ</a>
+                <hr>
+                <a href="https://eu.battle.net/support/ru/">ПОДДЕРЖКА</a>
+                <hr>
+                <a href="https://www.blizzard.com/ru-ru/company/about/contact.html">ОТКРЫТЬ ЗАПРОС</a>
+                <hr>
+                <a href="https://blizzard.gamespress.com/ru">ПРЕСС-РЕЛИЗЫ</a>
+                <hr>
+                <a href="https://develop.battle.net/">API</a>
+            </nav>
+            <p>© BLIZZARD ENTERTAINMENT, 2020. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+            <p>Все упомянутые <a title="Все упомянутые товарные знаки являются собственностью соответствующих владельцев" href="https://www.blizzard.com/ru-ru/legal/b04001c4-dc81-480d-a475-5e276e241e4f/pravovye-ogovorki-v-otnoshenii-tretih-lic">товарные знаки</a> являются собственностью соответствующих владельцев.</p>
+            <nav class="footer-links">
+                <a href="https://www.blizzard.com/ru-ru/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/politika-konfidencialnosti-blizzard-entertainment">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                <hr>
+                <a href="https://www.blizzard.com/ru-ru/legal/">СОГЛАШЕНИЕ BLIZZARD</a>
+                <hr>
+                <a href="https://www.blizzard.com/ru-ru/legal/511dbf9e-2b2d-4047-8243-4c5c65e0ebf1/terms-of-use-for-blizzards-websites">СОГЛАШЕНИЕ САЙТА</a>
+            </nav>
+            <a class="link_12" href="https://www.mkrf.ru/" title="Blizzard Home">
+                <img src="../../images/12+.png">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

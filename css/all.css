@@ -586,14 +586,15 @@ header nav a:hover{
 	width: 100%;
 }
 #about .about div:last-child{
+	width: 30%;
 	padding: 30px 0px 30px 60px;
 }
 
 #about .about div p{
-	font-size: 18px;
+	font-size: 24px;
 }
 #about .about div h2{
-	font-size: 26px;
+	font-size: 32px;
 }
 /*----FOOTER-------------------------------------------------------------------*/
 footer{
@@ -659,9 +660,26 @@ footer .social ul li img{
 	width: 100%;
 }
 /*----MEDIA-------------------------------------------------------------------*/
+@media only screen and (max-width:1480px){
+	#about .about{
+		width: 90%;
+	}
+	#about .about div:last-child{
+		width: 40%;
+	}
+}
 @media only screen and (max-width:1024px){
 	#about .about{
 		width: 90%;
+	}
+	#about .about div p{
+		font-size: 20px;
+	}
+	#about .about div h2{
+		font-size: 28px;
+	}
+	#about .about div:last-child{
+		width: 50%;
 	}
 	.artworks{
 		grid-template-columns: 1fr 1fr 1fr;
@@ -710,6 +728,12 @@ footer .social ul li img{
 	#about .about div:last-child{
 		text-align: left;
 		padding: 0px;
+	}
+	#about .about div p{
+		font-size: 18px;
+	}
+	#about .about div h2{
+		font-size: 24px;
 	}
 	#pricelist .price div{
 		width: 30%;	
@@ -794,6 +818,7 @@ footer .social ul li img{
 		align-self: center;
 	}
 	#about .about div:last-child{
+		width: 80%;
 		text-align: center;
 		padding: 0px;
 	}

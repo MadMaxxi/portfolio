@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://madmaxxi.ru/</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/twins/index.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/index.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_1/index.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_2/index.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/index.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/game.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/maps.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/heroes.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/materials/materials.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/d.va/d.va.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/ana/ana.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/mercy/mercy.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/bastion/bastion.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/baptiste/baptiste.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/brigitte/brigitte.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/genji/genji.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/dzen/dzen.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/reaper/reaper.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/zarya/zarya.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/junkrat/junkrat.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/doomfist/doomfist.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/lucio/lucio.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/mccree/mccree.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/moira/moira.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/mei/mei.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/orisa/orisa.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/reinhardt/reinhardt.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/widowmaker/widowmaker.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/sigma/sigma.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/symmetra/symmetra.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/soldier76/soldier76.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/sombra/sombra.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/hammond/hammond.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/torbjorn/torbjorn.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/tracer/tracer.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/roadhog/roadhog.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/winston/winston.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/pharra/pharra.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/hanzo/hanzo.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/echo/echo.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://madmaxxi.ru/demo/demo_3/pages/ashe/ashe.html</loc>
+  <lastmod>2021-01-27T18:34:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+</urlset>

@@ -1,4 +1,5 @@
 .more-pens {
+  font-family: 'Roboto',sans-serif;
   position: fixed;
   left: 20px;
   bottom: 20px;
@@ -6,11 +7,10 @@
   font-size: 24px;
 }
 
-a.white-mode, a.white-mode:link, a.white-mode:visited, a.white-mode:active {
-  font-family: 'Lora',serif;
+a.white-mode, a.white-mode:link, a.white-mode:visited, a.white-mode:active {  
   text-decoration: none;
   background: #212121;
-  padding: 4px 8px;
+  padding: 16px;
   color: #f7f7f7;
 }
 a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white-mode:active:hover {
@@ -34,7 +34,7 @@ body {
   top: 60%;
   height: 250px;
   transform: translateX(-50%) translateY(-50%);
-  font-family: "Montserrat";
+  font-family: 'Roboto',sans-serif;
   text-align: center;
   width: 100%;
 }

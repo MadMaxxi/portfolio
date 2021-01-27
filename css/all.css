@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap');
 *{
 	font-family: 'Roboto',sans-serif;
 	font-size: 16px;
 }
-
+html{
+	width: 100%;
+	margin: 0 auto;
+}
 body{
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 auto;
 	background: linear-gradient(90deg, #9198e5 10%,#727eff 45%,#727eff 55%, #9198e5 90%);
 	background-repeat: repeat;
 	background-position: 0 0;
@@ -18,6 +19,12 @@ body{
 section{
 	width: 100%;
 	background-color: rgba(255,255,255,0.1);
+	overflow: hidden;
+}
+content{
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 h1{
@@ -125,7 +132,7 @@ header nav a:hover{
 }
 
 #aside label a{
-	margin-right:24px;
+	margin-right:24px;	
 }
 
 /*-----FIRST BLOCK-----------------------------------------------------------------------*/
@@ -137,9 +144,17 @@ header nav a:hover{
 	justify-content: center;
 	flex-direction: column;
   }
+  a.active {
+	font-weight:700;
+	border-bottom:1px solid white;
+	padding-bottom:8px;
+	transition:all .2s linear;
+  }
 /*-----TYPING TEXT-------------------------------------------------------------------*/
 .text-js {
 	opacity: 0;
+	text-align: center;
+	width: 100%;
   }
   
   .cursor {
@@ -203,6 +218,7 @@ header nav a:hover{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 120px;
 	text-transform: uppercase;
+	text-align: center;
   }
   
   .glitch {
@@ -344,12 +360,22 @@ header nav a:hover{
 	margin:0;
 	width: 100%;
 	height: 70vh;
-	background-color: #FF5E4C;
-	transition: all .2s linear;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 	color:#111111;
 }
-.card_box:hover{
-	background-color:#fc4e48;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .card_box p{
@@ -357,28 +383,50 @@ header nav a:hover{
 	color: #111;
 	text-align: center;
 }
+.card_box p:last-child{
+	font: 48px 'Roboto', sans-serif;
+	color: #111;
+	text-align: center;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+}
+.card_box:hover p:last-child{
+	opacity: 1;
+}
+
 /*----ART BLOCK-------------------------------------------------------------------*/
 #arts{
 	width: 100%;
 }
 .artworks{
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
-	display: flex;
+	display:grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	grid-gap: 8px;
+
+	/*display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-evenly;*/
 }
 .artworks .art{
-	width:30%;
-	max-width: 448px;
-	min-width: 300px;
-	overflow: hidden;
+	width:100%;
 }
 
 .artworks .art img{
 	width: 100%;
+	transition: .3s all ease-in-out;
+	border-radius: 4px;
 }
+.artworks .art:hover img{
+	transform: translateY(-4px);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 /*----PRICELIST BLOCK-------------------------------------------------------------------*/
 #pricelist{
 	width: 100%;
@@ -391,9 +439,24 @@ header nav a:hover{
 	justify-content: space-evenly;
 }
 #pricelist .price div{
-	width: 30%;	
-	max-width: 600px;
-	min-width: 500px;
+	width: 20%;
+	min-width:400px;	
+	margin-bottom: 24px;	
+}
+#pricelist .price div div{
+	width: 100%;
+	height:0;
+	margin:0 auto;
+	opacity: 0;
+	transform: translateY(-600px);
+	transition: .2s ease-out all
+}
+#pricelist .price div:hover div{
+	transform: translateY(-400px);
+	opacity: 1;
+}
+#pricelist .price:nth-child(2) div:hover img{
+	filter:brightness(69%);
 }
 #pricelist .price h2{
 	font-size: 48px;
@@ -402,19 +465,27 @@ header nav a:hover{
 	color: white;
 }
 #pricelist .price div img{
-	width: 100%;	
+	width: 100%;
+	max-height:400px;
+	object-fit: cover;
+	transition: .2s ease-out all;	
 }
-#pricelist .price div h2{
+#pricelist .price div div p{	
+	width: 100%;
+	text-align: center;
+	color: white;
 	font-size: 24px;
+}
+
+#pricelist .price div .cost{
 	width: 100%;
 	text-align: center;
-	color: white;
+	color:white;
+	margin:0 auto;
+	font-size:24px;
+	font-weight: 700;
 }
-#pricelist .price div p{	
-	width: 100%;
-	text-align: center;
-	color: white;
-}
+
 #pricelist .form{
 	width: 100%;
 	margin:48px auto;
@@ -465,10 +536,6 @@ header nav a:hover{
 	padding:12px;
 	margin-bottom:4px;	
 }
-::-webkit-input-placeholder {color:#aaa}
-::-moz-placeholder          {color:#aaa}/* Firefox 19+ */
-:-moz-placeholder           {color:#aaa}/* Firefox 18- */
-:-ms-input-placeholder      {color:#aaa}
 
 #pricelist .form form textarea{
 	width: 100%;
@@ -504,7 +571,7 @@ header nav a:hover{
 	width:100%;
 }
 #about .about{
-	margin: 0 auto;
+	margin: 24px auto;
 	width: 70%;
 	display: flex;
 	flex-direction: row;
@@ -515,11 +582,8 @@ header nav a:hover{
 	width: 50%;
 	color: white;
 }
-#about .about div img{
+#about .about div:first-child img{
 	width: 100%;
-}
-#about .about div:first-child{
-	
 }
 #about .about div:last-child{
 	padding: 30px 0px 30px 60px;
@@ -593,4 +657,207 @@ footer .social ul a:hover li{
 }
 footer .social ul li img{
 	width: 100%;
+}
+/*----MEDIA-------------------------------------------------------------------*/
+@media only screen and (max-width:1024px){
+	#about .about{
+		width: 90%;
+	}
+	.artworks{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media only screen and (max-width:768px){
+	.type-js-1 h1 {
+		font-size: 36pt;
+	}
+	.type-js-1 .cursor{
+		height: 36pt;
+		top: 34px;
+	}
+	.type-js-2 .cursor{
+		top: 28px;
+	}
+	.card_box{
+		height: 50vh;
+	}
+	.card_box p{
+		font-size: 84px;
+	}
+	.card_box p:last-child{
+		font-size: 36px;
+	}
+	.artworks{
+		width: 90%;
+		grid-template-columns: 1fr 1fr;
+	}
+	#about .about{
+		width: 100%;
+		flex-direction: column;
+	}
+	#about .about div{
+		width: 80%;
+		margin: 0 auto;
+	}
+	#about .about div:first-child{
+		width: 70%;
+	}
+	#about .about div:first-child img{
+		width: 100%;
+		margin:0 auto;
+		align-self: center;
+	}
+	#about .about div:last-child{
+		text-align: left;
+		padding: 0px;
+	}
+	#pricelist .price div{
+		width: 30%;	
+		max-width: 400px;
+		min-width: 340px;
+		margin-bottom: 24px;
+	}
+	#pricelist .price div img{
+		width: 100%;
+		max-height:600px;	
+	}
+}
+@media only screen and (max-width:640px){
+	header{
+		width: 100%;
+		padding: 16px;	
+		height: 40px;
+		padding-right:0;
+		padding-left: 0;
+	}
+	#aside{
+		display: none !important;
+	}
+	.main_btn{
+		display:none;
+	}
+	header nav{
+		width: 100%;
+		margin:0 auto;
+	}
+	header nav a{
+		font-size: 16px;
+	}
+	#projects h1, #arts h1, #pricelist h1, #about h1{
+		width: 70%;
+		text-align: center;
+		font-size: 48px;
+		border-bottom: 2px solid white;
+		padding-bottom: 24px;
+		margin:0 auto;
+		margin-top: 48px;
+		margin-bottom: 24px;
+	}
+	/*.artworks{
+		grid-template-columns: 1fr;
+	}*/
+	#about .about{
+		width: 100%;
+		flex-direction: column;
+	}
+	.center__text {
+		font-size: 92px;
+	}
+	.type-js-1 h1 {
+		font-size: 32pt;
+	}	
+	.type-js-2 h1 {
+		font-size: 24pt;
+	}
+	.type-js-1 .cursor{
+		height: 32pt;
+		top: 34px;
+	}	
+	.type-js-2 .cursor{
+		height: 24pt;
+		top: 24px;
+	}
+	#pricelist .form .form_cap{
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#about .about div{
+		width: 80%;
+	}
+	#about .about div:first-child{
+		width: 70%;
+	}
+	#about .about div:first-child img{
+		width: 100%;
+		margin:0 auto;
+		align-self: center;
+	}
+	#about .about div:last-child{
+		text-align: center;
+		padding: 0px;
+	}
+	#pricelist .price h2{
+		font-size:32px;
+	}
+	#pricelist .price div div{
+		transform: translateY(-500px);
+	}
+	#pricelist .price div:hover div{
+		transform: translateY(-300px);
+	}
+	#pricelist .price div div h2{
+		margin-bottom:12px;
+	}
+	#pricelist .price div div p{
+		margin:0 auto;
+	}
+	#pricelist .form form{
+		width: 80%;
+		margin:0 auto;
+		min-width: auto;
+	}
+	#pricelist .price div h2 {
+		font-size:32px;
+		margin:0 auto;
+	}
+	#pricelist .price div .cost {
+		font-size: 22px;
+	}
+	#pricelist .price div{
+		width: 80%;	
+		max-width: none;
+		min-width: none;
+		margin-bottom: 24px;
+	}
+	#pricelist .price div img{
+		width: 100%;
+		max-height:500px;	
+	}
+	#pricelist .form form input{
+		width: 100%;		
+	}
+	#pricelist .form{
+		width: 100%;
+		margin:0px auto;
+		padding:42px 0px 42px 0px;
+	}
+	footer .social ul li{
+		width: 25px;
+		height: 25px;
+		margin:12px;
+		padding:12px;
+	}
+	footer .top img{
+		transform: scale(2);
+		width: 100%;
+		margin-top:15px
+	}
+	.card_box p{
+		font: 62px 'Lora', serif;
+	}
+	.card_box p:last-child{
+		font: 24px 'Roboto', sans-serif;
+		opacity: 1;
+	}
 }

@@ -83,7 +83,14 @@ function createCanvas(properties) {
 }
 
 function writeText(canvas, context, text) {
-  let size = 100;
+  $blocksize = $(".twins").width();
+  $breakpoint=640;  
+  if($blocksize <= $breakpoint){
+    $txtsize = 50;
+  }else{
+    $txtsize = 100;
+  }
+  let size = $txtsize;
   context.font = size + "px 'Lora', serif";
   context.fillStyle = "#111111";
   context.textAlign = "center";
